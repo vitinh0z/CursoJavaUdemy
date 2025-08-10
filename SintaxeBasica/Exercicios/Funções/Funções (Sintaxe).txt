@@ -1,0 +1,5 @@
+funções representam um processamento ja existente em Java
+Math.sqrt(26,1);
+System.out.println(string);
+
+Em OOP as funções em classes recebem o nome de "Metodos"

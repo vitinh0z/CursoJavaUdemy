@@ -1,0 +1,28 @@
+Formatar {
+     
+    toLoweCase() ----> Transforma em MAIUSCULA, 
+    toUpperCase() -----> Transforma em minuscula, 
+    trim()
+}
+
+
+Recortar {
+
+    Substring(inicio), 
+    Substring(inicio, fim)
+}
+
+Substituir { 
+
+    Replace(char, char)
+    Replace(string, string)
+}
+
+Buscar {
+
+    IndexOf
+    LastIndexOf
+
+}
+
+str.Split("")
