@@ -1,4 +1,4 @@
-package OrientaçãoAObjetos;
+package OrientaçãoAObjetos.Exercicios;
 
 public class Triangulo {
     public double a;

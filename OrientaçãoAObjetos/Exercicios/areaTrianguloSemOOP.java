@@ -1,7 +1,6 @@
 package OrientaçãoAObjetos.Exercicios;
 
 import java.util.Scanner;
-import OrientaçãoAObjetos.Triangulo;
 
 public class areaTrianguloSemOOP {
      public static void main (String[] args){
