@@ -1,5 +1,5 @@
 package OrientaçãoAObjetos.Exercicios;
-import java.awt.Rectangle;
+
 import java.util.Scanner;
 
 
@@ -19,7 +19,8 @@ public class AreaRetangulo {
     
     System.out.print("Height: ");
     rectangule.height = read.nextDouble();
-
+    
+    read.close();
 
     System.out.printf("AREA = %.2f\n", rectangule.area());
     System.out.printf("PERIMETRO = %.2f\n", rectangule.Perimeter());
