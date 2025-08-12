@@ -1,4 +1,4 @@
-package SalarioEmpregado;
+package OrientaçãoAObjetos.Exercicios;
 
 public class Funcionario {
 
@@ -52,7 +52,7 @@ public class Funcionario {
     }
 
     public String toString (){
-        return "Atualização: " + getNome() + ", " + salarioFinal();
+        return "Atualização: " + getNome() + " Salario Bruto " + getSalarioBruto() + " recebe aumento de: " + getAumento() + "\n | Salario Novo: " + salarioFinal();
     }
 }
 
