@@ -49,12 +49,8 @@ public class SalarioEmpregado {
         System.out.println(erroImposto.getMessage());
         
     }
-    } while (salarioValido == false);
-
-    
-
-
-
+    } 
+    while (salarioValido == false);
     System.out.print("Digite porcentagem de aumento: \n");
     funcionario.setAumento(read.nextDouble());
 
