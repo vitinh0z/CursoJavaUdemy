@@ -15,8 +15,8 @@ public class SalarioEmpregado {
 
     System.out.print("Nome do Funcionario: \n");
     funcionario.setNome(read.nextLine());
-    
 
+        
     boolean salarioBrutoValido = false;
     do {
     try {
@@ -32,8 +32,6 @@ public class SalarioEmpregado {
     }
     } while (salarioBrutoValido == false);
 
-
-    // logica de como faz repeat no java mds mto dificil ;-;
     
     boolean salarioValido = false;
     do {

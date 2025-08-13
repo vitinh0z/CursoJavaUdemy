@@ -60,7 +60,7 @@ public class Funcionario {
     }
 
     public String toString (){
-        return "Atualização: " + getNome() + ", " + salarioFinal();
+        return String.format("Funcionario: %s \n Salario Bruto: %.2f \n Imposto Cobrado: %.2f \n Aumento de %.2f \n Salario Liquido: %.2f",getNome(),getSalarioBruto(), getImposto(),salarioFinal());
     }
 
  }
