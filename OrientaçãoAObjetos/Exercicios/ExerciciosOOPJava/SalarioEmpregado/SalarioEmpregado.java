@@ -15,26 +15,27 @@ public class SalarioEmpregado {
 
     System.out.print("Nome do Funcionario: \n");
     funcionario.setNome(read.nextLine());
+    
 
+    boolean salarioBrutoValido = false;
     do {
     try {
 
         System.out.print("Salario Bruto do Funcionario: \n");
-
         funcionario.setSalarioBruto(read.nextDouble());
+        salarioBrutoValido = true;
+
 
     } catch (IllegalArgumentException erroSalario){
 
         System.out.println(erroSalario.getMessage());
     }
-
-    } while (funcionario.getSalarioBruto() < 0);
+    } while (salarioBrutoValido == false);
 
 
     // logica de como faz repeat no java mds mto dificil ;-;
     
     boolean salarioValido = false;
-
     do {
 
     try {
