@@ -70,7 +70,7 @@ public class Moedas {
     }
 
     public String toString (){
-        return String.format("O valor de %f fica %f em %s", getMoeda(),getConvertida(),getNomeMoeda());
+        return String.format("O valor de %.2f fica %.2f em %s", getMoeda(),getConvertida(),getNomeMoeda());
     }
 
 
