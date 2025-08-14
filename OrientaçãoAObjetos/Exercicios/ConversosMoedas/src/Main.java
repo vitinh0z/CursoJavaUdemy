@@ -14,18 +14,23 @@ public class Main {
         System.out.println(" [1] - Dolar(USD)\n [2] - Euro(EUR)\n [3] - Libra(GBP)\n [4] - Iene Japonês(JPY)\n ");
         moedas.setEscolhaMoeda(read.nextInt());
 
-        System.out.print("Digite o valor da moeda:R$ ");
-        moedas.setMoeda(read.nextDouble());
+        boolean verificarValor = false;
+         do {
+            try {
+                System.out.print("Digite o valor da moeda:R$ ");
+                moedas.setMoeda(read.nextDouble());
+                verificarValor = true;
+            } 
+            catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+            }
+
+        } while (verificarValor == false);
 
         moedas.Converter();
 
         read.close();
 
         System.out.println(moedas);
-
-
-
-
-
     }
 }

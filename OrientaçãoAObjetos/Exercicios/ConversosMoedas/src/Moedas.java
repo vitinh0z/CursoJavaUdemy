@@ -17,6 +17,9 @@ public class Moedas {
 
 
     public void setMoeda (double moeda){
+        if (moeda <= 0){
+            throw new IllegalArgumentException ("Moeda deve ser maior que zero");
+        }
         this.moeda = moeda;
     }
 
