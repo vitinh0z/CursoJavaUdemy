@@ -1,4 +1,5 @@
-i
+package Vetores.VetorNumerosNegativos;
+    
 
 import java.util.Scanner;
 
@@ -9,8 +10,7 @@ public class Main {
         int quantidade;
         Scanner read = new Scanner(System.in);
 
-        Numeros numeros = new Numeros ();
-
+        Numeros numeros = new Numeros(0);
 
         boolean opcao = false;
 
@@ -39,16 +39,4 @@ public class Main {
 
     
 
-
-
-
-
-
-
-    
-
-
-
-
-    
 }
