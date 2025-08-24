@@ -15,7 +15,7 @@ public class Main {
         Products[] vect = new Products[n];
 
         read.nextLine();
-        for (int i = 0; i<n; i++){
+        for (int i = 0; i<vect.length; i++){
 
             
 
