@@ -6,37 +6,63 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        Scanner read = new Scanner (System.in);
 
         int quantidade;
-        Scanner read = new Scanner(System.in);
+        
+        
+        do {
 
-        Numeros numeros = new Numeros(0);
+            System.out.print("Digite a quantidade de números a serem digitados: ");
+            quantidade = read.nextInt();
 
-        boolean opcao = false;
 
-        System.out.println("Digite quantidade de números: ");
-        quantidade = read.nextInt();
+            if (quantidade >= 10) {
 
-        if (quantidade > 10){  
-            opcao = true;
-            do {
+                System.out.println("Quantidade não pode ser mais que 10");
+            
+            }
 
-                System.out.println("Quantidade deve ser menor que 10");
+            else if (quantidade <= 0) {
 
-            } while (opcao == true);
+                System.out.println("Quantidade deve ser positivo e maior que zero");
+
+            }
+
+        } while (quantidade >= 10 || quantidade <= 0);
+        
+        Numeros[] vetor = new Numeros[quantidade];
+        
+
+        read.nextLine();
+
+        for (int i = 0; i<vetor.length; i++){
+
+            System.out.printf("Digite o %d º Número: ", i+1);
+            int numeros = read.nextInt();
+
+            vetor[i] = new Numeros(numeros);
 
         }
-       
 
-       
-       
+        read.close();
 
-       
+        for (int i = 0; i<vetor.length;i++){
+            if (vetor[i].numeroNegativo()){
+                System.out.printf("O número %d é Negativo\n", vetor[i].getNumeros());
+            }
+            else if (vetor[i].NumeroPositivo()){
+                System.out.printf("Numero %d é positivo\n", vetor[i].getNumeros());
+            }
+            else {
+                System.out.printf("O número %d é neutro\n", vetor[i].getNumeros());
+            }
+
+        }
 
 
 
     }
-
     
 
 }
