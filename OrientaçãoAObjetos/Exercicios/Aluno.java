@@ -1,4 +1,4 @@
-package OrientaçãoAObjetos.Exercicios;
+
 import java.util.Scanner;
 
 public class Aluno {

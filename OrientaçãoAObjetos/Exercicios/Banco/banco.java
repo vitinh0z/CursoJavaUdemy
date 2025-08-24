@@ -1,4 +1,4 @@
-package OrientaçãoAObjetos.Exercicios.Banco;
+package Banco;
 
 
 import java.util.Scanner;

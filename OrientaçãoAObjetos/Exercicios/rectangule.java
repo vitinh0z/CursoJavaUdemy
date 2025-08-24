@@ -1,4 +1,4 @@
-package OrientaçãoAObjetos.Exercicios;
+
 
 public class rectangule {
 

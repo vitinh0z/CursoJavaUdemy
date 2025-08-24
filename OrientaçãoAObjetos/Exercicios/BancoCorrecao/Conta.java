@@ -1,4 +1,4 @@
-package OrientaçãoAObjetos.Exercicios.BancoCorrecao;
+package BancoCorrecao;
 
 public class Conta {
 
