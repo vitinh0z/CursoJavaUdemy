@@ -1,0 +1,118 @@
+Exercício 1: O Básico - Classe Livro
+O objetivo é criar uma classe para representar um livro em uma biblioteca online. Pense em quais informações são absolutamente essenciais para um livro existir no sistema e quais poderiam ser adicionadas depois.
+
+Sua Tarefa:
+
+Crie uma classe chamada Livro.
+
+Defina os seguintes atributos privados (private):
+
+titulo (String)
+
+autor (String)
+
+numeroDePaginas (int)
+
+genero (String) - Ex: "Ficção Científica", "Fantasia", "Romance".
+
+avaliacao (double) - A nota que os leitores deram, de 0.0 a 5.0.
+
+Pense e implemente:
+
+Quais desses atributos são obrigatórios para que um Livro seja cadastrado? Sem eles, o objeto Livro nem faria sentido. Para estes, crie um construtor que os receba como parâmetro.
+
+Quais atributos são opcionais ou podem ser definidos/alterados depois que o livro já foi criado? (Por exemplo, a avaliação só existe depois que alguém lê e avalia). Para estes, crie métodos setters.
+
+Crie métodos getters para todos os atributos, para que seja possível ler seus valores.
+
+Crie um método mostrarDetalhes() que imprima todas as informações do livro de forma organizada.
+
+No seu método main:
+
+Crie um Scanner para ler a entrada do usuário.
+
+Peça ao usuário para digitar as informações obrigatórias do livro.
+
+Crie uma instância (um objeto) da classe Livro usando o construtor que você definiu.
+
+Depois de criar o objeto, pergunte ao usuário se ele quer adicionar uma avaliação. Se ele quiser, peça a nota e use o método setter apropriado para atualizar o objeto.
+
+No final, chame o método mostrarDetalhes() para exibir o resultado.
+
+Exercício 2: Intermediário - Classe Produto com Validação
+Agora o desafio é um pouco maior. Vamos criar uma classe Produto para um sistema de e-commerce. A complicação é que alguns dados precisam ser validados para garantir que o objeto não seja criado com um estado inválido (ex: preço negativo).
+
+Sua Tarefa:
+
+Crie uma classe chamada Produto.
+
+Defina os seguintes atributos privados:
+
+nome (String)
+
+codigo (String) - Um código único, ex: "SKU-12345".
+
+preco (double)
+
+quantidadeEmEstoque (int)
+
+Pense e implemente:
+
+Todos os atributos acima parecem essenciais para um produto existir. Portanto, crie um construtor que receba todos eles.
+
+Dentro do construtor, adicione validações (regras):
+
+O nome e o codigo não podem ser nulos ou vazios.
+
+O preco e a quantidadeEmEstoque não podem ser menores que zero.
+
+Se algum desses dados for inválido, o que você deve fazer? Uma boa prática é lançar uma exceção, como throw new IllegalArgumentException("O preço não pode ser negativo.");. Isso impede a criação de um objeto "quebrado".
+
+Crie um método setPreco(double novoPreco). Este método também deve ter a validação para não permitir um preço negativo.
+
+Crie um método setQuantidadeEmEstoque(int novaQuantidade) com a validação para não permitir um valor negativo.
+
+Crie métodos adicionarEstoque(int quantidade) e removerEstoque(int quantidade) que alteram a quantidadeEmEstoque. Lembre-se que removerEstoque não pode deixar o estoque negativo!
+
+Crie getters para todos os atributos.
+
+No seu método main:
+
+Peça ao usuário para digitar todas as informações de um novo produto.
+
+Use um bloco try-catch para tentar criar o objeto Produto. Se o usuário digitar um valor inválido (ex: preço -50), seu construtor vai lançar uma exceção, e o bloco catch deve capturá-la e informar ao usuário sobre o erro.
+
+Se o produto for criado com sucesso, simule a adição e remoção de estoque, mostrando a quantidade atualizada a cada passo.
+
+Exercício 3: Avançado - Juntando Tudo com Carro e Motor
+Neste exercício, você vai trabalhar com duas classes que se relacionam. Um Carro tem um Motor. Isso vai te forçar a pensar sobre a ordem de criação dos objetos.
+
+Sua Tarefa:
+
+Crie a classe Motor:
+
+Atributos privados: potencia (double, ex: 1.0, 1.6, 2.0) e tipoCombustivel (String, ex: "Gasolina", "Elétrico", "Flex").
+
+Decida: A potência e o tipo de combustível são essenciais para um motor? Crie o construtor apropriado para a classe Motor baseado na sua decisão.
+
+Crie getters para os atributos.
+
+Crie a classe Carro:
+
+Atributos privados: modelo (String), marca (String) e motor (do tipo Motor).
+
+Pense: Um carro pode existir sem um modelo, uma marca e um motor definidos? Crie um construtor para a classe Carro que reflita sua resposta. Note que um dos parâmetros do construtor será um objeto do tipo Motor.
+
+Crie um método ligar() que imprime uma mensagem como: "Ligando o motor 1.6 a Gasolina... Vrum vrum!". A mensagem deve usar as informações do objeto motor que está dentro do carro.
+
+Crie um método mostrarInfo() que exibe o modelo, a marca, a potência do motor e o tipo de combustível.
+
+No seu método main:
+
+Primeiro, colete as informações necessárias para criar um objeto Motor. Crie esse objeto.
+
+Depois, colete as informações do Carro (modelo e marca).
+
+Agora, crie o objeto Carro, passando o modelo, a marca e o objeto Motor que você criou no primeiro passo para o construtor do Carro.
+
+Finalmente, chame os métodos mostrarInfo() e ligar() do seu objeto Carro

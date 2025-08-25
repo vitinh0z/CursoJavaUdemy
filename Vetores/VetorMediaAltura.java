@@ -21,6 +21,8 @@ public class VetorMediaAltura {
     }
     double media = soma / n;
 
+    read.close();
+
 
     System.out.printf("Media de altura: %.2f", media);
 }
