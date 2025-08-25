@@ -6,12 +6,14 @@ public class Verificador {
         
         for (int i = 0; i<vetor.length; i++){
 
-            if (vetor[i].getNumeros() % 2 == 0){
+            if (vetor[i].isPar()){
             System.out.println("Par: " + vetor[i].getNumeros());
             }
-
-            else {
+            else if(vetor[i].isImpar()) {
                 System.out.println("Impar: " + vetor[i].getNumeros());
+            }
+            else {
+                System.out.println("Zero: " + vetor[i].getNumeros());
             }
         }
     }

@@ -18,7 +18,6 @@ public class Main {
         Numeros[] vetor = new Numeros[quantidade];
 
         for (int i = 0; i<vetor.length; i++){
-            
             System.out.printf("Digite o %d° Número: ", i+1);
             int numero = read.nextInt();
 

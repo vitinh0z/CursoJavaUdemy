@@ -14,6 +14,24 @@ public class Numeros {
         this.numeros = numeros;
     }
 
+    public boolean isImpar (){
+        if (getNumeros() % 3 == 0){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    public boolean isPar (){
+        if (getNumeros() % 2 == 0){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
     
     
 }
