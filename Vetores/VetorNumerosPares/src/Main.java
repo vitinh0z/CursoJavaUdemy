@@ -11,7 +11,10 @@ public class Main {
         
             System.out.print("DIgite a quantidade de numeros a serem digitados: ");
             quantidade = read.nextInt();
-            Quantidade.quantidade(quantidade);
+
+            if (quantidade <= 0){
+                System.out.println("A quantidade deve ser maior que zero");
+            }
 
         } while (quantidade <=0 );
 

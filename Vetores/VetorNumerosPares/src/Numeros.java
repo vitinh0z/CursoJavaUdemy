@@ -15,7 +15,7 @@ public class Numeros {
     }
 
     public boolean isImpar (){
-        if (getNumeros() % 3 == 0){
+        if (getNumeros() % 3 != 0){
             return true;
         }
         else {
