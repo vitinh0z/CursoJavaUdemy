@@ -16,27 +16,24 @@ public class Main {
 
         for (int i = 0; i<vetor.length; i++){
             System.out.printf("Digite o %dº Número: ", i+1);
-            int numero = read.nextInt();
+            double numero = read.nextDouble();
 
             vetor[i] = new Numero(numero);
 
         }
 
-        int soma = 0;
-        for (int i = 0; i<vetor.length;i++){
-            soma += vetor[i].getNumero();
+        read.close();
 
-        }
+        double soma = Calculadora.calcularSoma(vetor);
+        double media = Calculadora.calcularMedia(vetor);
+
+
         System.out.println("A soma é: " + soma);
-
-
-
-
-
-
-
+        System.out.printf("A média é %.2f", media);
 
     }
+
+    
 
 
 

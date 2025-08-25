@@ -1,23 +1,23 @@
-package Vetores.SomaVetor;
+    package Vetores.SomaVetor;
 
-public class Numero {
+    public class Numero {
 
-    private int numero;
-
-    public Numero (int numero) {
-        this.numero = numero;
-    }
-
-    public int getNumero() {
-        return numero;
-    }
-
-    public void setNumero(int numero) {
-        this.numero = numero;
-    }
-
-   
-
+        private double numero;
     
-    
-}
+        public Numero (double numero) {
+            this.numero = numero;
+        }
+
+
+        public double getNumero() {
+            return numero;
+        }
+
+        public void setNumero(double numero) {
+            this.numero = numero;
+        }
+
+        
+        
+        
+    }
