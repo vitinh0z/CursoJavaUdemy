@@ -14,25 +14,6 @@ public class Numeros {
         this.numeros = numeros;
     }
 
-    public boolean isImpar(){
-        if ((getNumeros() / 3) == 0 && (getNumeros() / 5 == 0)){
-            
-            return true;
-        }
-
-        else if ((getNumeros() / 2) == 0 && (getNumeros() / 4 == 0)){
-
-            return false;
-        }
-        
-       
-        
-    
-    }
-
-
-    
-
     
     
 }
