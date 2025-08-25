@@ -15,6 +15,7 @@ public class Verificador {
             else {
                 System.out.println("Zero: " + vetor[i].getNumeros());
             }
+            
         }
     }
     
