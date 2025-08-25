@@ -11,6 +11,9 @@ Extra: Permitir atualizar notas.
 
 
 import java.util.Scanner;
+
+import OrientaçãoAObjetos.Exercicios.Aluno;
+
 public class MediaNotas {
 
     public static void main(String[] args) {
