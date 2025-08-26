@@ -15,7 +15,7 @@ public class Numeros {
     }
 
     public boolean isImpar (){
-        if (getNumeros() % 3 == 0){
+        if (getNumeros() % 3 != 0){
             return true;
         }
         else {
@@ -24,7 +24,7 @@ public class Numeros {
     }
 
     public boolean isPar (){
-        if (getNumeros() % 2 != 0){
+        if (getNumeros() % 2 == 0){
             return true;
         }
         else {
@@ -32,6 +32,7 @@ public class Numeros {
         }
     }
 
+  
     
     
 }
