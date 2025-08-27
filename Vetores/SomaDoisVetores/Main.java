@@ -28,7 +28,8 @@ public class Main {
             
         }
 
-        for (int i = 0; i<vetorB.length; i++){
+        for (int i = 0; i<vetorB.length; i++){ // 
+
             System.out.printf("Digite o %d° valor do vetorB: ", i+1);
             int numero = read.nextInt();
 
@@ -37,8 +38,9 @@ public class Main {
         }
 
         for (int i=0; i<vetorA.length; i++){
+
            int soma = vetorA[i].getNumeros() + vetorB[i].getNumeros();
-           System.out.printf("A SOMA DO INDICE %d°: %d\n", i+1, soma);
+           System.out.printf("\nA SOMA DO INDICE %d°: %d\n", i+1, soma);
         
         }
 
