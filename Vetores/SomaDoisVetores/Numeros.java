@@ -2,31 +2,24 @@ package Vetores.SomaDoisVetores;
 
 public class Numeros {
 
-    private int numerosA;
+    private int numeros;
 
-    private int numerosB;
+   
 
-    public Numeros (int numerosA, int numerosB){
-        this.numerosA = numerosA;
-        this.numerosB = numerosB;
+    public Numeros (int numeros){
+        this.numeros = numeros;
 
     }
 
-    public int getNumerosA() {
-        return numerosA;
+    public int getNumeros() {
+        return numeros;
     }
 
-    public void setNumerosA(int numerosA) {
-        this.numerosA = numerosA;
+    public void setNumeros(int numeros) {
+        this.numeros = numeros;
     }
 
-    public int getNumerosB() {
-        return numerosB;
-    }
-
-    public void setNumerosB(int numerosB) {
-        this.numerosB = numerosB;
-    }
+    
 
     
 

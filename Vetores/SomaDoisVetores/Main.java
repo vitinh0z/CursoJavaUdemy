@@ -18,18 +18,28 @@ public class Main {
         Numeros[] vetorA = new Numeros[quantidade];
         Numeros[] vetorB = new Numeros[quantidade];
 
+        
+        
+
         for (int i = 0; i<vetorA.length; i++){
             System.out.printf("Digite o %d° valor do vetorA: ", i+1);
-            vetorA[i].getNumerosA();
+            int numero = read.nextInt();
+            vetorA[i] = new Numeros (numero);
+            
         }
 
         for (int i = 0; i<vetorB.length; i++){
             System.out.printf("Digite o %d° valor do vetorB: ", i+1);
-            vetorB[i].getNumerosB();
+            int numero = read.nextInt();
+
+            vetorB[i] = new Numeros(numero);
+
         }
 
         for (int i=0; i<vetorA.length; i++){
-            vetorA[i]
+           int soma = vetorA[i].getNumeros() + vetorB[i].getNumeros();
+           System.out.printf("A SOMA DO INDICE %d°: %d\n", i+1, soma);
+        
         }
 
         
