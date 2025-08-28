@@ -18,7 +18,7 @@ public class Numeros {
     }
 
     public boolean isPar () {
-        if (getNumeros() % 2 != 0){
+        if (getNumeros() % 2 == 0){
             return true;
         }
         
