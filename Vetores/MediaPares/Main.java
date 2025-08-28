@@ -1,4 +1,5 @@
 package Vetores.MediaPares;
+
 import java.util.Scanner;
 
 public class Main {
@@ -17,25 +18,46 @@ public class Main {
         int numeros;
 
         for (int i = 0; i<vetorA.length; i++) {
+
             System.out.printf("Digite o %d° do vetorA: ", i+1);
             numeros = read.nextInt();
 
             vetorA[i] = new Numeros(numeros);
         }
-        int soma = 0;
+
+        int pares = 0;
+        int soma;
 
         for (int i = 0; i<vetorA.length; i++){
 
+           
+
             if (vetorA[i].isPar()){
 
-                System.out.println("Media dos Pares: "+ (soma+=vetorA[i].getNumeros()) / vetorA.length);
-
+                
+                pares++;
+                soma = pares += vetorA[i].getNumeros();
+                
             }
-    
-            else {
-                System.out.println("Não tem numeros pares");
-            }
+            
         }
+
+
+        int media = soma / pares;
+
+        if (pares > 0){
+            System.out.println("A Média dos pares são: " + media);
+
+        }
+
+        else{
+            System.out.println("Não tem pares");
+           
+
+        }
+     
+
+       
 
 
     }
