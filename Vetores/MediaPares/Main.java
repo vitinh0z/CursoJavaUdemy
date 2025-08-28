@@ -26,7 +26,7 @@ public class Main {
         }
 
         int pares = 0;
-        int soma;
+        int somaPares = 0;
 
         for (int i = 0; i<vetorA.length; i++){
 
@@ -35,15 +35,16 @@ public class Main {
             if (vetorA[i].isPar()){
 
                 
-                pares++;
-                soma = pares += vetorA[i].getNumeros();
                 
+                somaPares += vetorA[i].getNumeros();
+                pares++;
+
             }
             
         }
 
 
-        int media = soma / pares;
+        int media = somaPares / pares;
 
         if (pares > 0){
             System.out.println("A Média dos pares são: " + media);
@@ -56,9 +57,6 @@ public class Main {
 
         }
      
-
-       
-
 
     }
 }

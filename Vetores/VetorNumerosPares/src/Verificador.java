@@ -13,11 +13,6 @@ public class Verificador {
                 System.out.println("Impar: " + vetor[i].getNumeros());
 
             }
-<<<<<<< HEAD
-=======
-
-            
->>>>>>> 202f3682ebeb7da9bd7f8bce116791c658259d07
         }
     }
     

@@ -27,6 +27,15 @@ public class Numeros {
         }
     }
 
+    public boolean isImpar () {
+        if (getNumeros() != 0){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
 
 
 
