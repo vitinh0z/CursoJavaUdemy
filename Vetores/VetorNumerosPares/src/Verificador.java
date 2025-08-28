@@ -12,10 +12,6 @@ public class Verificador {
             else if(vetor[i].isImpar()) {
                 System.out.println("Impar: " + vetor[i].getNumeros());
             }
-            else {
-                System.out.println("Zero: " + vetor[i].getNumeros());
-            }
-            
         }
     }
     
