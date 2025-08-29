@@ -29,7 +29,15 @@ public class Main {
         }
 
 
-        Array.sort(vetor[i].getAltura());
+        double maior = 0.0;
+
+        for (int i = 0; i<vetor.length;i++){
+            if (maior < vetor[i].getAltura() ){
+                maior = vetor[i].getAltura();
+            }
+        }
+
+        System.out.printf("Maior altura: %.2f", maior);
             
 
 
