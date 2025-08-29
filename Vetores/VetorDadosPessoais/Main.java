@@ -1,5 +1,5 @@
 package Vetores.VetorDadosPessoais;
-import java.lang.reflect.Array;
+
 import java.util.Scanner;
 
 public class Main {
@@ -30,15 +30,18 @@ public class Main {
 
 
         double maior = 0.0;
-
+        double soma = 0.0;
         for (int i = 0; i<vetor.length;i++){
             if (maior < vetor[i].getAltura() ){
                 maior = vetor[i].getAltura();
             }
+        soma += vetor[i].getAltura();
         }
 
-        System.out.printf("Maior altura: %.2f", maior);
-            
+        double media = soma/vetor.length;
+
+        System.out.printf("\nMaior altura: %.2f\n", maior);
+        System.out.printf("\nA media de altura foi: %.2f", media);    
 
 
 
