@@ -40,6 +40,10 @@ public class Funcionarios {
         this.id = id;
     }
 
+    public String toString () {
+        return String.format("ID: %d | Nome: %s | Salario: %f\n", getId(),getNome(), getSalario());
+    }
+
 
 
     

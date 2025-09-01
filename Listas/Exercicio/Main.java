@@ -39,7 +39,7 @@ public class Main {
   
         }
 
-        System.out.println("Entre com ID do funcionario que gostaria de acessar: ");
+        System.out.println("\nEntre com ID do funcionario que gostaria de acessar: ");
         int request = read.nextInt();
 
         Funcionarios result = list.stream().filter(x -> x.getId() == request).findFirst().orElse(null);
@@ -47,7 +47,7 @@ public class Main {
 
 
         if (result != null){
-        System.out.printf("Funcionario: ID: %d | Nome: %s | Salario: %.2f", result.getId(), result.getNome(), result.getSalario());
+        System.out.printf("\nFuncionario: ID: %d | Nome: %s | Salario: %.2f\n", result.getId(), result.getNome(), result.getSalario());
         }
         
         else {
@@ -56,9 +56,11 @@ public class Main {
 
 
 
-        for (Funcionarios x : funcionarios){
-            System.out.println(x);
+        for (Funcionarios x : list){
+            System.out.println(x.toString());
         }
+
+
 
     }
     
