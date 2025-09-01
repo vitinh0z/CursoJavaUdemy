@@ -53,28 +53,12 @@ public class Main {
         else {
         System.out.println("Funcionario não encontrado");
         }
-        
-
-        
-
-        
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        for (Funcionarios x : funcionarios){
+            System.out.println(x);
+        }
 
     }
     
