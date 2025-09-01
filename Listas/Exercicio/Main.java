@@ -44,10 +44,11 @@ public class Main {
 
         Funcionarios result = list.stream().filter(x -> x.getId() == request).findFirst().orElse(null);
 
+        read.close();
 
 
         if (result != null){
-        System.out.printf("\nFuncionario: ID: %d | Nome: %s | Salario: %.2f\n", result.getId(), result.getNome(), result.getSalario());
+        System.out.printf("\nFuncionario Encontrado: ID: %d | Nome: %s | Salario: %.2f\n", result.getId(), result.getNome(), result.getSalario());
         }
         
         else {
@@ -55,7 +56,7 @@ public class Main {
         }
 
 
-
+        System.out.println("Funcionarios");
         for (Funcionarios x : list){
             System.out.println(x.toString());
         }
