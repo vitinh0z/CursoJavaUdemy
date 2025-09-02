@@ -1,6 +1,4 @@
-package Listas.Exercicio;
-
-
+package Listas.ListaDeTarefas;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,60 +7,69 @@ public class Main {
 
     public static void main(String[] args) {
         
-        Scanner read = new Scanner (System.in);
+        Scanner read = new Scanner(System.in);
 
-        System.out.println("Quantos funcionarios serão registrados: ");
-        int quantidade = read.nextInt();
+        System.out.println("\n--------- Lista de Tarefas -------------\n");
 
-        List<Funcionarios> list = new ArrayList<>(quantidade);
-
-        read.nextLine();
-
-        for (int i = 0; i<quantidade; i++){
-
-            System.out.printf("Empregado %d\n",i+1);
-            System.out.printf("Digite o Id do Funcionario: ",i+1);
-            int id = read.nextInt();
-            
-            read.nextLine();
-
-            System.out.printf("Digite o nome do Funcionario: ",i+1);
-            String nome = read.nextLine();
-
-            System.out.printf("Digite o salario do funcionario: ",i+1);
-            Double salario = read.nextDouble();
-            
-           
-            Funcionarios funcionarios = new Funcionarios(nome, id, salario);
-
-            list.add(funcionarios);
-  
-        }
-
-        System.out.println("\nEntre com ID do funcionario que gostaria de acessar: ");
-        int request = read.nextInt();
-
-        Funcionarios result = list.stream().filter(x -> x.getId() == request).findFirst().orElse(null);
-
-        read.close();
-
-
-        if (result != null){
-        System.out.printf("\nFuncionario Encontrado: ID: %d | Nome: %s | Salario: %.2f\n", result.getId(), result.getNome(), result.getSalario());
-        }
         
-        else {
-        System.out.println("Funcionario não encontrado");
-        }
+        Tarefa tarefa = new Tarefa("Sem descrição");
+
+        List<Tarefa> list = new ArrayList<>();
+
+        System.out.println("\nTitulo da tarefa");
+        System.out.println("");
+        tarefa.setTitulo(read.nextLine());
 
 
-        System.out.println("Funcionarios");
-        for (Funcionarios x : list){
-            System.out.println(x.toString());
-        }
+        
+        do  {
+            
+            System.out.println("Gostaria de colocar uma descrição para tarefa? s/n");
+            tarefa.setOpcao(read.nextLine());
+            
+
+            if (tarefa.getOpcao().equals("s")){
+
+                System.out.println("Descrição:\n");
+                System.out.println("");
+                tarefa.setTarefas(read.nextLine());
+                list.add(tarefa);
+
+                for (Tarefa x : list){
+                    System.out.println(x.toString());
+                }
+            }
+
+           
+            else if (tarefa.getOpcao().equals("n")) {
+                list.add(tarefa);
+                 
+                
 
 
+
+                for (Tarefa x: list){
+                    System.out.println(x.toString());
+                }
+            }
+
+            else {
+                System.out.println("opcão Invalida ");
+                
+            }
+
+        } while (tarefa.verificarDescricao() == false);
+
+
+            
+
+       
+            
+
+        
 
     }
+
+
     
 }
