@@ -1,17 +1,15 @@
 package Listas.ListaDeTarefas;
-import java.util.Date;
+
 
 
 public class Tarefa {
 
 
-    private int escolhaTarefa;
     private String titulo;
-    private String descricao;
-    private String editar;
     private int id;
-    private String opcao;
-    private Date data;    
+    private String opcao;  
+    private String descricao;
+
 
     
 
@@ -47,15 +45,6 @@ public class Tarefa {
     }
 
 
-    public String getEditar() {
-        return editar;
-    }
-
-
-    public void setEditar(String editar) {
-        this.editar = editar;
-    }
-
 
     public int getId() {
         return id;
@@ -67,51 +56,15 @@ public class Tarefa {
     }
 
 
-    public Tarefa (int escolhaTarefa, String titulo){
-        this.escolhaTarefa = escolhaTarefa;
-        this.titulo = titulo;
-    }
+    @Override
+    public String toString() {
+        return String.format(
+        "\nTítulo da Tarefa:\n%s\n\nDescrição da Tarefa:\n%s\n",
+        getTitulo(),
+        getDescricao()
+    );
+}
 
-    public void setEscolhaTarefa(int escolhaTarefa){
-        this.escolhaTarefa = escolhaTarefa;
-    }
-
-    public int getEscolhaTarefa (){
-        return escolhaTarefa;
-    }
-
-    public void setTarefas (String tarefas){
-        this.titulo = tarefas;
-    }
-
-    public String getTarefas (){
-        return titulo;
-    }
-
-    public void setOpcao(String opcao){
-        this.opcao = opcao;
-    }
-
-    public String getOpcao (){
-        return opcao;
-    }
-
-    public boolean verificarDescricao (){
-        if (getOpcao().equals("s")) {
-            return true;
-        }
-
-        else if (getOpcao().equals("n")){
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
-
-    public String toString () {
-        return String.format("\nTitulo da Tarefa:" + "\n" + getTitulo() + "\n" + "\nDescrição da Tarefa:\n" + getDescricao() + "\n"); 
-    }
 
     
 
