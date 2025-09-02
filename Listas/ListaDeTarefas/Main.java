@@ -20,33 +20,40 @@ public class Main {
         System.out.println("");
         tarefa.setTitulo(read.nextLine());
 
-        boolean verificarDescricao = false;
 
         do {
+
             System.out.println("Gostaria de colocar uma descrição para tarefa? s/n");
-            char op = read.nextLine().charAt(0);
-            verificarDescricao = true;
+            tarefa.setOpcao(read.nextLine());
+            
 
-            switch (Character.toLowerCase(op)) {
+            if (tarefa.getOpcao() == "s"){
 
-                case 's':
-                    System.out.println("Descrição");
-                    System.out.println("");
-                    tarefa.setTarefas(read.nextLine());
-                    list.add(tarefa);  
-                break;
-
-                case 'n':
-                    list.add(tarefa);
-                break;
-
-                default:
-                    System.out.println("Opção Invalida");
-                break;
+                System.out.println("Descrição");
+                System.out.println("");
+                tarefa.setTarefas(read.nextLine());
+                list.add(tarefa);
             }
 
-        } while (verificarDescricao == false);
+            else if (tarefa.getOpcao() == "n") {
+                System.out.println("Sem descrição da tarefa");
+                list.add(tarefa);
+            }
+
+            else {
+                System.out.println("opcão Invalida ");
+            }
+
+        } while (tarefa.verificarDescricao() == true);
+            
+
+       
+            
+
+        
 
     }
+
+
     
 }

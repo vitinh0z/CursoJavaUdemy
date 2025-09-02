@@ -9,7 +9,9 @@ public class Tarefa {
     private String titulo;
     private String descricao;
     private String editar;
-    private int id;    
+    private int id;
+    private String opcao;
+    private Date data;    
 
 
 
@@ -59,9 +61,9 @@ public class Tarefa {
     }
 
 
-    public Tarefa (int escolhaTarefa, String tarefas){
+    public Tarefa (int escolhaTarefa, String titulo){
         this.escolhaTarefa = escolhaTarefa;
-        this.tarefas = tarefas;
+        this.titulo = titulo;
     }
 
     public void setEscolhaTarefa(int escolhaTarefa){
@@ -73,11 +75,32 @@ public class Tarefa {
     }
 
     public void setTarefas (String tarefas){
-        this.tarefas = tarefas;
+        this.titulo = tarefas;
     }
 
     public String getTarefas (){
-        return tarefas;
+        return titulo;
+    }
+
+    public void setOpcao(String opcao){
+        this.opcao = opcao;
+    }
+
+    public String getOpcao (){
+        return opcao;
+    }
+
+    public boolean verificarDescricao (){
+        if (getOpcao() == "s") {
+            return false;
+        }
+
+        else if (getOpcao() == "n"){
+            return false;
+        }
+        else {
+            return true;
+        }
     }
 
     
