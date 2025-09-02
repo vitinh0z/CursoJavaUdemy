@@ -13,11 +13,17 @@ public class Tarefa {
     private String opcao;
     private Date data;    
 
-
+    
 
 
     public Tarefa () {
 
+    }
+
+    
+
+    public Tarefa (String descricao){
+        this.descricao = descricao;
     }
 
 
@@ -91,17 +97,23 @@ public class Tarefa {
     }
 
     public boolean verificarDescricao (){
-        if (getOpcao() == "s") {
-            return false;
-        }
-
-        else if (getOpcao() == "n"){
-            return false;
-        }
-        else {
+        if (getOpcao().equals("s")) {
             return true;
         }
+
+        else if (getOpcao().equals("n")){
+            return true;
+        }
+        else {
+            return false;
+        }
     }
+
+    public String toString () {
+        return String.format("\nTitulo da Tarefa:" + "\n" + getTitulo() + "\n" + "\nDescrição da Tarefa:\n" + getDescricao() + "\n"); 
+    }
+
+    
 
     
 }
