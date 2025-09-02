@@ -1,4 +1,5 @@
 package OrientaçãoAObjetos.Contrutores;
+
 import java.util.Scanner;
 
 public class ExemploEstoque {
@@ -25,7 +26,7 @@ public class ExemploEstoque {
     int quantity = read.nextInt();
     product.addProducts(quantity);
 
-     System.out.print("Update data " + product);
+    System.out.print("Update data " + product);
 
         
     System.out.println("Enter the number of produts to be removed in stock: "); 
