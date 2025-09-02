@@ -11,69 +11,41 @@ public class Main {
 
         System.out.println("--------- Lista de Tarefas ------------- ");
 
+        
+        Tarefa tarefa = new Tarefa();
+
+        List<Tarefa> list = new ArrayList<>();
+
+        System.out.println("Titulo");
+        System.out.println("");
+        tarefa.setTitulo(read.nextLine());
+
+        boolean verificarDescricao = false;
+
         do {
+            System.out.println("Gostaria de colocar uma descrição para tarefa? s/n");
+            char op = read.nextLine().charAt(0);
+            verificarDescricao = true;
 
+            switch (Character.toLowerCase(op)) {
 
-            List<Tarefa> tarefas = new ArrayList<>();
+                case 's':
+                    System.out.println("Descrição");
+                    System.out.println("");
+                    tarefa.setTarefas(read.nextLine());
+                    list.add(tarefa);  
+                break;
 
-            System.out.println("Tarefa: ");
-            
+                case 'n':
+                    list.add(tarefa);
+                break;
 
+                default:
+                    System.out.println("Opção Invalida");
+                break;
+            }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        } while (continuar == 0);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        } while (verificarDescricao == false);
 
     }
     
