@@ -6,12 +6,8 @@ public class Tarefa {
 
 
     private String titulo;
-    private int id;
-    private String opcao;  
+    private int id; 
     private String descricao;
-
-
-    
 
 
     public Tarefa () {
@@ -59,11 +55,11 @@ public class Tarefa {
     @Override
     public String toString() {
         return String.format(
-        "\nTítulo da Tarefa:\n%s\n\nDescrição da Tarefa:\n%s\n",
+        "\nID:\n%d\nTítulo da Tarefa:\n%s\n\nDescrição da Tarefa:\n%s\n",
+        getId(),
         getTitulo(),
-        getDescricao()
-    );
-}
+        getDescricao());
+    }
 
 
     
