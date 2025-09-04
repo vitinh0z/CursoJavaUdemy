@@ -12,16 +12,17 @@ public class AdicionarTarefa {
 
         List<Tarefa> list = new ArrayList<>();
         Scanner read = new Scanner(System.in);
-
+        
+        int id = 0;
         do{
             Tarefa tarefa = new Tarefa();
 
-            int id = 0;
+            
             
 
             System.out.println("\nTitulo da tarefa");
             tarefa.setTitulo(read.nextLine()); 
-            id += 1;
+            id++;
             tarefa.setId(id);
 
             
