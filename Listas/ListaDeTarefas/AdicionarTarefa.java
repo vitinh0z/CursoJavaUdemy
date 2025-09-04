@@ -15,15 +15,28 @@ public class AdicionarTarefa {
         
         int id = 0;
         do{
+
             Tarefa tarefa = new Tarefa();
 
-            
-            
+            boolean tituloValido = false;
 
-            System.out.println("\nTitulo da tarefa");
-            tarefa.setTitulo(read.nextLine()); 
-            id++;
-            tarefa.setId(id);
+            do {
+                try {
+
+                    System.out.println("\nTitulo da tarefa");
+                    tarefa.setTitulo(read.nextLine()); 
+                    id++;
+                    tituloValido = true;
+
+                    tarefa.setId(id);
+
+                } catch (IllegalArgumentException e) {
+                    
+                    System.out.println(e.getMessage());
+
+                }
+
+            } while (tituloValido == false);
 
             
             
@@ -35,9 +48,14 @@ public class AdicionarTarefa {
 
             if (opcao.equals("s")){
 
+                try {
                 System.out.println("\nDescrição");
                 tarefa.setDescricao(read.nextLine());
                 list.add(tarefa);
+
+                } catch (IllegalArgumentException e){
+                    System.out.println(e.getMessage());
+                }
             }
 
                 
