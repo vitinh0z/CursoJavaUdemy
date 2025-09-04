@@ -15,7 +15,6 @@ public class Tarefa {
     }
 
     
-
     public Tarefa (String descricao){
         this.descricao = descricao;
     }
@@ -27,6 +26,9 @@ public class Tarefa {
 
 
     public void setTitulo(String titulo) {
+        if (titulo.isEmpty()){
+            throw new IllegalArgumentException("Nome da tarefa não pode ser vazio");
+        }
         this.titulo = titulo;
     }
 
@@ -37,9 +39,11 @@ public class Tarefa {
 
 
     public void setDescricao(String descricao) {
+        if (descricao.isEmpty()){
+            throw new IllegalArgumentException("Deve conter descrição");
+        }
         this.descricao = descricao;
     }
-
 
 
     public int getId() {
@@ -61,8 +65,6 @@ public class Tarefa {
         getDescricao());
     }
 
-
-    
 
     
 }
