@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class AdicionarTarefa {
 
-    public static void adicionarTarefa() {
+    public static void adicionarTarefa(GerenciadorTarefas gerenciadorTarefas) {
 
         String continuarTarefa;
 

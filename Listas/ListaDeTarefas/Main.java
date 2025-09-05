@@ -21,7 +21,7 @@ public class Main {
         switch (menu) {
             case 1:
 
-                AdicionarTarefa.adicionarTarefa();
+                AdicionarTarefa.adicionarTarefa(gerenciadorTarefas);
                 
             break;
 
