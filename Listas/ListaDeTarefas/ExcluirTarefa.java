@@ -11,7 +11,7 @@ public class ExcluirTarefa {
 
         System.out.println("Digite o ID da tarefa que gostaria de excluir: ");
         int id = read.nextInt();
-
+        read.close();
         if (gerenciadorTarefas.removerTarefa(id)){
             System.out.printf("\nTarefa do ID: %d REMOVIDA\n", id);
         }

@@ -18,7 +18,7 @@ public class EditarTarefa {
 
         System.out.println("Digite a nova descrição: ");
         String novaDescricao = read.nextLine();
-
+        read.close();
         gerenciadorTarefas.editar(id, novoTitulo, novaDescricao);
 
 

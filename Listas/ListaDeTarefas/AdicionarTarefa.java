@@ -72,7 +72,7 @@ public class AdicionarTarefa {
             continuarTarefa = read.nextLine();
 
         } while (continuarTarefa.equalsIgnoreCase("s"));
-
+        read.close();
         for (Tarefa t : gerenciadorTarefas.getList()) {
 
             System.out.println("-----------------------------");
