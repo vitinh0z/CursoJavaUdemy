@@ -6,7 +6,9 @@ public class Main {
     public static void main(String[] args) {
         
         Scanner read = new Scanner(System.in);
-        
+
+         GerenciadorTarefas gerenciadorTarefas = new GerenciadorTarefas();
+
 
         System.out.println("\n--------- Lista de Tarefas -------------\n");
 
@@ -24,7 +26,7 @@ public class Main {
             break;
 
             case 2 :
-                System.out.println("em implementação");
+                ExcluirTarefa.excluir(gerenciadorTarefas);
             break;
 
             case 3:

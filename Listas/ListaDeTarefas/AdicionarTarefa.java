@@ -79,6 +79,8 @@ public class AdicionarTarefa {
             System.out.println(t);
         }
 
+        Main.main(null);
+
     }
 
 }
