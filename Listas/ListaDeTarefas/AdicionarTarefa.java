@@ -66,20 +66,19 @@ public class AdicionarTarefa {
                 tarefa.setDescricao("Sem Descrição");
             }
 
-            list.add(tarefa);
+            gerenciadorTarefas.getList().add(tarefa);
 
             System.out.println("\nAdicionar mais outra tarefa? s/n");
             continuarTarefa = read.nextLine();
 
         } while (continuarTarefa.equalsIgnoreCase("s"));
 
-        for (Tarefa t : list) {
+        for (Tarefa t : gerenciadorTarefas.getList()) {
 
             System.out.println("-----------------------------");
             System.out.println(t);
         }
 
-        Main.main(null);
 
     }
 

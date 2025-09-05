@@ -8,9 +8,18 @@ public class GerenciadorTarefas {
     Tarefa tarefa = new Tarefa();
     private List<Tarefa> list = new ArrayList<>();
 
+
     
+    public List<Tarefa> getList() {
+        return list;
+    }
+
+    public void setList(List<Tarefa> list) {
+        this.list = list;
+    }
+
     public boolean removerTarefa (int id){
-    return list.removeIf(remover -> remover.getId() == id);
+    return getList().removeIf(remover -> remover.getId() == id);
         
     }
 

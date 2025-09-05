@@ -7,43 +7,57 @@ public class Main {
         
         Scanner read = new Scanner(System.in);
 
-         GerenciadorTarefas gerenciadorTarefas = new GerenciadorTarefas();
-
-
+        GerenciadorTarefas gerenciadorTarefas = new GerenciadorTarefas();
+        int menu;
+ 
         System.out.println("\n--------- Lista de Tarefas -------------\n");
-
-        System.out.print("[1] - Criar nova tarefa\n[2] - Editar Tarefa\n[3] - Excluir Tarefa\nOpção: ");
-        int menu = read.nextInt();
+        
+        do {
+        System.out.print("[1] - Criar nova tarefa\n[2] - Editar Tarefa\n[3] - Excluir Tarefa\n[4] - Sair\nOpção: ");
+        menu = read.nextInt();
 
         read.nextLine();
 
-
-        switch (menu) {
-            case 1:
-
-                AdicionarTarefa.adicionarTarefa(gerenciadorTarefas);
-                
-            break;
-
-            case 2 :
-                ExcluirTarefa.excluir(gerenciadorTarefas);
-            break;
-
-            case 3:
-                System.out.println("em implementação");
-            break;
         
-        default:
-            System.out.println("Opcao Invalida");
-        break;
-        }
+            switch (menu) {
+                case 1:
+
+                    AdicionarTarefa.adicionarTarefa(gerenciadorTarefas);
+                
+                break;
+
+                case 2 :
+
+                    EditarTarefa.editarTarefa(gerenciadorTarefas);
+
+                break;
+
+                case 3:
+
+                    ExcluirTarefa.excluir(gerenciadorTarefas);
+
+                break;
+
+                case 4:
+
+                    System.out.println("Saindo...");
+
+                break;
+        
+                default:
+
+                    System.out.println("Opcao Invalida");
+
+                break;
+
+            }
+
+        } while (menu != 4);
 
         read.close();
-        
-
 
     }
 
-
+    
     
 }
