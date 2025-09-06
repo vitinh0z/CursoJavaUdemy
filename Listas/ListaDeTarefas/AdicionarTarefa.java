@@ -1,17 +1,12 @@
 package Listas.ListaDeTarefas;
-
-import java.util.List;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AdicionarTarefa {
 
-    public static void adicionarTarefa(GerenciadorTarefas gerenciadorTarefas) {
+    public static void adicionarTarefa(GerenciadorTarefas gerenciadorTarefas, Scanner read) {
 
         String continuarTarefa;
 
-        List<Tarefa> list = new ArrayList<>();
-        Scanner read = new Scanner(System.in);
 
         int id = 0;
         do {
@@ -72,7 +67,6 @@ public class AdicionarTarefa {
             continuarTarefa = read.nextLine();
 
         } while (continuarTarefa.equalsIgnoreCase("s"));
-        read.close();
         for (Tarefa t : gerenciadorTarefas.getList()) {
 
             System.out.println("-----------------------------");

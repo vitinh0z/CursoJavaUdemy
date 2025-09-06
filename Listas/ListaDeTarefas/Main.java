@@ -22,19 +22,19 @@ public class Main {
             switch (menu) {
                 case 1:
 
-                    AdicionarTarefa.adicionarTarefa(gerenciadorTarefas);
+                    AdicionarTarefa.adicionarTarefa(gerenciadorTarefas, read);
                 
                 break;
 
                 case 2 :
 
-                    EditarTarefa.editarTarefa(gerenciadorTarefas);
+                    EditarTarefa.editarTarefa(gerenciadorTarefas, read);
 
                 break;
 
                 case 3:
 
-                    ExcluirTarefa.excluir(gerenciadorTarefas);
+                    ExcluirTarefa.excluir(gerenciadorTarefas, read);
 
                 break;
 

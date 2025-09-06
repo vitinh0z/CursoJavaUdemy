@@ -4,22 +4,25 @@ import java.util.Scanner;
 
 public class EditarTarefa {
 
-    public static void editarTarefa(GerenciadorTarefas gerenciadorTarefas) {
+    public static void editarTarefa(GerenciadorTarefas gerenciadorTarefas, Scanner read) {
 
-
-        Scanner read = new Scanner(System.in);
-
-
+        
         System.out.println("Digite o id da tarefa que gostaria de editar: ");
         int id = read.nextInt();
-
+        
         System.out.println("Digite o novo titulo: ");
         String novoTitulo = read.nextLine();
 
         System.out.println("Digite a nova descrição: ");
         String novaDescricao = read.nextLine();
-        read.close();
+        
         gerenciadorTarefas.editar(id, novoTitulo, novaDescricao);
+
+
+        for (Tarefa t : gerenciadorTarefas.getList()) {
+            System.out.println(t);
+            
+        }
 
 
 
