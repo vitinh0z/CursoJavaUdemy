@@ -10,12 +10,10 @@ public class Trabalhador {
     private double salario;
     private CargoFuncionario level;
 
-
     private Departamento departamento;
-    private List<ContratoHoras> contratos = new ArrayList<>(); // tem muitos
+    private List<ContratoHoras> contratos = new ArrayList<>();
 
-    public Trabalhador (){
-
+    public Trabalhador() {
     }
 
     public Trabalhador(String nome, double salario, CargoFuncionario level, Departamento departamento) {
@@ -23,8 +21,9 @@ public class Trabalhador {
         this.salario = salario;
         this.level = level;
         this.departamento = departamento;
-        
     }
+
+    // ... getters e setters permanecem os mesmos ...
 
     public String getNome() {
         return nome;
@@ -62,33 +61,28 @@ public class Trabalhador {
         return contratos;
     }
 
-    
 
-    
-    public void adicionarContrato (ContratoHoras contrato){
+    public void adicionarContrato(ContratoHoras contrato) {
         contratos.add(contrato);
     }
 
-    public void removerContrato (ContratoHoras contrato){
+    public void removerContrato(ContratoHoras contrato) {
         contratos.remove(contrato);
     }
-    
 
-    public double inCome (int ano, int mes){
+    public double inCome(int ano, int mes) {
         double soma = salario;
         Calendar calendar = Calendar.getInstance();
-        for (ContratoHoras contratoHoras : contratos) {
-            calendar.setTime(calendar.getTime());
+        for (ContratoHoras contrato : contratos) {
+
+            calendar.setTime(contrato.getData());
             int contrato_ano = calendar.get(Calendar.YEAR);
             int contrato_mes = 1 + calendar.get(Calendar.MONTH);
 
-            if (ano == contrato_ano && mes == contrato_mes){
-                soma += contratoHoras.valorTotal();
+            if (ano == contrato_ano && mes == contrato_mes) {
+                soma += contrato.valorTotal();
             }
-            
         }
         return soma;
     }
-
-    
 }

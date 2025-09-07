@@ -4,20 +4,18 @@ import java.util.Date;
 
 public class ContratoHoras {
 
-
     private Date data;
     private double valorHora;
     private Integer horas;
 
-
-    public ContratoHoras (){
-
+    public ContratoHoras() {
     }
 
-    public ContratoHoras (Date data, double valorHora, Integer horas){
+    public ContratoHoras(Date data, double valorHora, Integer horas) {
         this.data = data;
         this.horas = horas;
-        this.valorHora = horas;
+        
+        this.valorHora = valorHora;
     }
 
     public Date getData() {
@@ -44,10 +42,7 @@ public class ContratoHoras {
         this.horas = horas;
     }
 
-    public double valorTotal (){
+    public double valorTotal() {
         return getValorHora() * getHoras();
     }
-    
-    
-    
 }
