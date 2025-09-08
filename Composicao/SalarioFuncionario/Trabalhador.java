@@ -23,7 +23,7 @@ public class Trabalhador {
         this.departamento = departamento;
     }
 
-    // ... getters e setters permanecem os mesmos ...
+    
 
     public String getNome() {
         return nome;

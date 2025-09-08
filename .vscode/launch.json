@@ -8,6 +8,13 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+            "mainClass": "Composicao.Post.Main",
+            "projectName": "CursoJavaUdemy_96d8bcb9"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
             "mainClass": "Composicao.SalarioFuncionario.Main",
             "projectName": "CursoJavaUdemy_96d8bcb9"
         },
