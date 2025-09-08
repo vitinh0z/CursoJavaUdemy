@@ -2,11 +2,13 @@ package Composicao.PedidoCliente;
 
 import java.text.ParseException;
 import java.time.LocalTime;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) throws ParseException {
+
         
         Scanner read = new Scanner(System.in);
         LocalTime momentoPedido = LocalTime.now();
@@ -27,11 +29,9 @@ public class Main {
         System.out.println("Digite status: ");
         String statusProduct = read.nextLine();
 
-         Pedido pedido = new Pedido(momentoPedido, StatusPedido.valueOf(statusProduct), null);
-
         System.out.println("Digite a quantidade de produtos");
         int quantidade = read.nextInt();
-
+        
         read.nextLine();
         
         for (int i = 0; i<quantidade; i++){
@@ -45,15 +45,16 @@ public class Main {
             double precoProduto = read.nextDouble();
 
             Produto produto = new Produto(nomeProduto, precoProduto);
-            pedido.addItem(produto);
+            ItensPedido itensPedido = new ItensPedido(quantidadeProduto, precoProduto, produto);
 
-            ItensPedido itensPedido = new ItensPedido(quantidadeProduto,precoProduto);
+             System.out.println(itensPedido);
 
         }
+        
 
             
 
-            System.out.println(pedido);
+            
             System.out.println();
 
 

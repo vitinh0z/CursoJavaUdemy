@@ -11,6 +11,19 @@ public class Pedido {
     private StatusPedido status;
 
     private ItensPedido pedido;
+
+    private Produto produto;
+
+    private LocalTime hours;
+
+    private List<ItensPedido> itensPedidos = new ArrayList<>();
+
+    public Pedido(LocalTime moment, StatusPedido status, Produto produto) {
+        this.moment = moment;
+        this.status = status;
+        this.produto = produto;
+    }
+
     public ItensPedido getPedido() {
         return pedido;
     }
@@ -22,31 +35,7 @@ public class Pedido {
     }
 
 
-    private Produto produto;
-    private LocalTime hours;
-
-    private List<ItensPedido> itensPedidos = new ArrayList<>();
     
-
-
-
-
-    public List<Produto> getProdutos() {
-        return produtos;
-    }
-
-
-
-
-
-
-
-
-    public Pedido(LocalTime moment, StatusPedido status, Produto produto) {
-        this.moment = moment;
-        this.status = status;
-        this.produto = produto;
-    }
     
 
     public LocalTime getMoment() {
@@ -82,18 +71,15 @@ public class Pedido {
 
 
     public void addItem (Produto produto){
-        itensPedidos.add(produto);
+        itensPedidos.add(pedido);
     }
     
-    public void addQuantity (ItensPedido itensPedidos){
-        itensPedidos.getQuantity(produto);
-    }
 
     public double totalValue (){
         double soma = 0;
 
-        for (Produto produto : produtos) {
-            soma += produto.getPrice();
+        for (ItensPedido itensPedido : itensPedidos) {
+            System.out.println(itensPedido);
         }
     return soma;
 
@@ -105,10 +91,12 @@ public class Pedido {
         StringBuilder sb = new StringBuilder();
         sb.append(moment + "\n");
         sb.append(status + "\n");
-        for (Produto produto : produtos) {
-            sb.append(produto.getNome());
-            sb.append(produto.getPrice());
+        for (ItensPedido itensPedido : itensPedidos) {
+            sb.append(itensPedido.getQuantity());
+            sb.append(itensPedido.getPrice());
+            sb.append(itensPedido.getProduto());
         }
+
         return sb.toString();
 
 

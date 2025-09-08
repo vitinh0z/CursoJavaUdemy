@@ -63,6 +63,14 @@ class ItensPedido {
         return price * quantity;
     }
 
+
+
+    @Override
+    public String toString() {
+        return "ItensPedido [getQuantity()=" + getQuantity() + ", getPrice()=" + getPrice() + ", getProduto()="
+                + getProduto() + ", getClass()=" + getClass() + "]";
+    }
+
     
     
 
