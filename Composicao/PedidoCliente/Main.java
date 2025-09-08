@@ -21,6 +21,7 @@ public class Main {
         System.out.println("Digite data de nascimento");
         String birthDate = read.nextLine();
 
+
         Cliente cliente = new Cliente(name, email, birthDate);
 
         System.out.println("Digite status: ");
@@ -30,6 +31,8 @@ public class Main {
 
         System.out.println("Digite a quantidade de produtos");
         int quantidade = read.nextInt();
+
+        read.nextLine();
         
         for (int i = 0; i<quantidade; i++){
             System.out.printf("Entre com %d", i+1);

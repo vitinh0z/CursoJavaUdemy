@@ -1,9 +1,15 @@
 package Composicao.PedidoCliente;
 
+import java.util.ArrayList;
+import java.util.List;
+
 class ItensPedido {
 
     private Integer quantity;
     private double price;
+    
+    private Produto produto;
+   
 
     public ItensPedido (){
 
@@ -11,9 +17,10 @@ class ItensPedido {
 
 
 
-    public ItensPedido(Integer quantity, double price) {
+    public ItensPedido(Integer quantity, double price, Produto produto) {
         this.quantity = quantity;
         this.price = price;
+        this.produto = produto;
     }
 
 
@@ -40,9 +47,23 @@ class ItensPedido {
         this.price = price;
     }
 
-    public double subTotal () {
-        return getPrice() * getQuantity();
+
+
+    public Produto getProduto() {
+        return produto;
     }
+
+
+
+    public void setProduto(Produto produto) {
+        this.produto = produto;
+    }
+
+    public double subTotal (){
+        return price * quantity;
+    }
+
+    
     
 
     

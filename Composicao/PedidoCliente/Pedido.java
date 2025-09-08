@@ -10,10 +10,36 @@ public class Pedido {
     private LocalTime moment;
     private StatusPedido status;
 
+    private ItensPedido pedido;
+    public ItensPedido getPedido() {
+        return pedido;
+    }
+
+
+
+    public void setPedido(ItensPedido pedido) {
+        this.pedido = pedido;
+    }
+
+
     private Produto produto;
     private LocalTime hours;
 
-    private List<Produto> produtos = new ArrayList<>();
+    private List<ItensPedido> itensPedidos = new ArrayList<>();
+    
+
+
+
+
+    public List<Produto> getProdutos() {
+        return produtos;
+    }
+
+
+
+
+
+
 
 
     public Pedido(LocalTime moment, StatusPedido status, Produto produto) {
@@ -42,17 +68,12 @@ public class Pedido {
         this.status = status;
     }
 
-
-    public List<Produto> getProdutos() {
-        return produtos;
-    }
-
     
-
 
     public Produto getProduto() {
         return produto;
     }
+    
 
 
     public void setProduto(Produto produto) {
@@ -61,11 +82,11 @@ public class Pedido {
 
 
     public void addItem (Produto produto){
-        produtos.add(produto);
+        itensPedidos.add(produto);
     }
     
-    public void removeItem (Produto produto){
-        produtos.remove(produto);
+    public void addQuantity (ItensPedido itensPedidos){
+        itensPedidos.getQuantity(produto);
     }
 
     public double totalValue (){
