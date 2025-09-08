@@ -10,8 +10,6 @@ public class Main {
     public static void main(String[] args) throws ParseException {
         
         Scanner read = new Scanner(System.in);
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yy");
-
 
         System.out.println("Digite o nome: ");
         String name = read.nextLine();
