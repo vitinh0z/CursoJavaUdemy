@@ -29,7 +29,7 @@ public class Main {
         System.out.print("Quantos contratos para este trabalhador? ");
         int quantidadeContratos = read.nextInt();
 
-        // Corrigido: o loop deve ser 'i < quantidadeContratos'
+       
         for (int i = 0; i < quantidadeContratos; i++) {
             System.out.println("ENTRE COM CONTRATO #" + (i + 1) + " data:");
             System.out.print("Data (DD/MM/YYYY): ");

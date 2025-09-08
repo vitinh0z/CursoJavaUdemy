@@ -1,32 +1,34 @@
 package Composicao.PedidoCliente;
 
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class Pedido {
     
-    private Date moment;
+    private LocalTime moment;
     private StatusPedido status;
 
     private Produto produto;
+    private LocalTime hours;
 
     private List<Produto> produtos = new ArrayList<>();
 
 
-    public Pedido(Date moment, StatusPedido status, Produto produto) {
+    public Pedido(LocalTime moment, StatusPedido status, Produto produto) {
         this.moment = moment;
         this.status = status;
         this.produto = produto;
     }
+    
 
-
-    public Date getMoment() {
+    public LocalTime getMoment() {
         return moment;
     }
 
 
-    public void setMoment(Date moment) {
+    public void setMoment(LocalTime moment) {
         this.moment = moment;
     }
 
@@ -73,6 +75,26 @@ public class Pedido {
             soma += produto.getPrice();
         }
     return soma;
+
+    }
+
+
+    public String toString (){
+
+        StringBuilder sb = new StringBuilder();
+        sb.append(moment + "\n");
+        sb.append(status + "\n");
+        for (Produto produto : produtos) {
+            sb.append(produto.getNome());
+            sb.append(produto.getPrice());
+        }
+        return sb.toString();
+
+
+
+
+
+
 
     }
     

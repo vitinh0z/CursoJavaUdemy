@@ -6,6 +6,8 @@ public class Produto {
     private double price;
 
 
+    
+
     public Produto (){
 
     }
