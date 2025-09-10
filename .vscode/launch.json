@@ -9,6 +9,13 @@
             "name": "Main",
             "request": "launch",
             "mainClass": "Composicao.PedidoCliente.Main",
+            "projectName": "CursoJavaUdemy_96d8bcb9"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Composicao.PedidoCliente.Main",
             "projectName": "CursoJavaUdemy_4c84b918"
         },
         {

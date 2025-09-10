@@ -1,114 +1,95 @@
 package Composicao.PedidoCliente;
 
-import java.time.LocalTime;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class Pedido {
     
-    private LocalTime moment;
+    // Formatter para a data no toString
+    private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+
+    private Date moment;
     private StatusPedido status;
+    
+    // COMPOSIÇÃO: Pedido TEM-UM Cliente
+    private Cliente cliente;
+    
+    // COMPOSIÇÃO: Pedido TEM-VÁRIOS ItensPedido
+    private List<ItensPedido> itens = new ArrayList<>();
 
-    private ItensPedido pedido;
-
-    private Produto produto;
-
-    private LocalTime hours;
-
-    private List<ItensPedido> itensPedidos = new ArrayList<>();
-
-    public Pedido(LocalTime moment, StatusPedido status, Produto produto) {
+    public Pedido(Date moment, StatusPedido status, Cliente cliente) {
         this.moment = moment;
         this.status = status;
-        this.produto = produto;
+        this.cliente = cliente;
     }
-
-    public ItensPedido getPedido() {
-        return pedido;
-    }
-
-
-
-    public void setPedido(ItensPedido pedido) {
-        this.pedido = pedido;
-    }
-
-
     
-    
+   
+    public void addItem(ItensPedido item) {
+        itens.add(item);
+    }
 
-    public LocalTime getMoment() {
+    public void removeItem(ItensPedido item) {
+        itens.remove(item);
+    }
+    
+   
+    public double total() {
+        double soma = 0.0;
+        for (ItensPedido item : itens) {
+            soma += item.subTotal(); 
+        }
+        return soma;
+    }
+
+    // Getters e Setters
+    public Date getMoment() {
         return moment;
     }
 
-
-    public void setMoment(LocalTime moment) {
+    public void setMoment(Date moment) {
         this.moment = moment;
     }
-
 
     public StatusPedido getStatus() {
         return status;
     }
 
-
     public void setStatus(StatusPedido status) {
         this.status = status;
     }
 
-    
+    public Cliente getCliente() {
+        return cliente;
+    }
 
-    public Produto getProduto() {
-        return produto;
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public List<ItensPedido> getItens() {
+        return itens;
     }
     
-
-
-    public void setProduto(Produto produto) {
-        this.produto = produto;
-    }
-
-
-    public void addItem (Produto produto){
-        itensPedidos.add(pedido);
-    }
-    
-
-    public double totalValue (){
-        double soma = 0;
-
-        for (ItensPedido itensPedido : itensPedidos) {
-            System.out.println(itensPedido);
-        }
-    return soma;
-
-    }
-
-
-    public String toString (){
-
+   
+    @Override
+    public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(moment + "\n");
-        sb.append(status + "\n");
-        for (ItensPedido itensPedido : itensPedidos) {
-            sb.append(itensPedido.getQuantity());
-            sb.append(itensPedido.getPrice());
-            sb.append(itensPedido.getProduto());
+        sb.append("RESUMO DO PEDIDO:\n");
+        sb.append("Momento do Pedido: " + sdf.format(moment) + "\n");
+        sb.append("Status do Pedido: " + status + "\n");
+        sb.append("Cliente: " + cliente.getName() + " (" + cliente.getEmail() + ")\n");
+        sb.append("Itens do Pedido:\n");
+        
+        for (ItensPedido item : itens) {
+            sb.append(item.getProduto().getNome() + ", ");
+            sb.append("Preço: R$ " + String.format("%.2f", item.getPrice()) + ", ");
+            sb.append("Quantidade: " + item.getQuantity() + ", ");
+            sb.append("Subtotal: R$ " + String.format("%.2f", item.subTotal()) + "\n");
         }
-
+        
+        sb.append("Valor Total do Pedido: R$ " + String.format("%.2f", total()));
         return sb.toString();
-
-
-
-
-
-
-
     }
-    
-    
-    
-
-
 }
