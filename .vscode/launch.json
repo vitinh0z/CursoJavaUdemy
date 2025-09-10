@@ -1,0 +1,301 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Composicao.PedidoCliente.Main",
+            "projectName": "CursoJavaUdemy_96d8bcb9"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Composicao.PedidoCliente.Main",
+            "projectName": "CursoJavaUdemy_4c84b918"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Composicao.PedidoCliente.Main",
+            "projectName": "CursoJavaUdemy_c430b5c7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Composicao.SalarioFuncionario.Main",
+            "projectName": "CursoJavaUdemy_c430b5c7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Composicao.Post.Main",
+            "projectName": "CursoJavaUdemy_96d8bcb9"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Composicao.SalarioFuncionario.Main",
+            "projectName": "CursoJavaUdemy_96d8bcb9"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Enumeracao.EnumeracaoExemplo.Main",
+            "projectName": "CursoJavaUdemy_96d8bcb9"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Matrizes.ValorNegativo.Main",
+            "projectName": "CursoJavaUdemy_96d8bcb9"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Listas.ListaDeTarefas.Main",
+            "projectName": "CursoJavaUdemy_4c84b918"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Listas.ListaDeTarefas.Main",
+            "projectName": "CursoJavaUdemy_96d8bcb9"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Boxing.Main",
+            "projectName": "CursoJavaUdemy_c430b5c7"
+        },
+        {
+            "type": "java",
+            "name": "Main(1)",
+            "request": "launch",
+            "mainClass": "DefaultConstructor.Main",
+            "projectName": "CursoJavaUdemy_c430b5c7"
+        },
+        {
+            "type": "java",
+            "name": "Main(2)",
+            "request": "launch",
+            "mainClass": "ForEach.Main",
+            "projectName": "CursoJavaUdemy_c430b5c7"
+        },
+        {
+            "type": "java",
+            "name": "Main(3)",
+            "request": "launch",
+            "mainClass": "Listas.Exercicio.Main",
+            "projectName": "CursoJavaUdemy_c430b5c7"
+        },
+        {
+            "type": "java",
+            "name": "Main(4)",
+            "request": "launch",
+            "mainClass": "Listas.ListaDeTarefas.Main",
+            "projectName": "CursoJavaUdemy_c430b5c7"
+        },
+        {
+            "type": "java",
+            "name": "Main(5)",
+            "request": "launch",
+            "mainClass": "Listas.Main",
+            "projectName": "CursoJavaUdemy_c430b5c7"
+        },
+        {
+            "type": "java",
+            "name": "HoraMInSeg",
+            "request": "launch",
+            "mainClass": "LivrodeJava.HoraMInSeg",
+            "projectName": "CursoJavaUdemy_c430b5c7"
+        },
+        {
+            "type": "java",
+            "name": "Main(6)",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "CursoJavaUdemy_c430b5c7"
+        },
+        {
+            "type": "java",
+            "name": "ExemploEstoque",
+            "request": "launch",
+            "mainClass": "OrientaçãoAObjetos.Contrutores.ExemploEstoque",
+            "projectName": "CursoJavaUdemy_c430b5c7"
+        },
+        {
+            "type": "java",
+            "name": "Aluno",
+            "request": "launch",
+            "mainClass": "OrientaçãoAObjetos.Exercicios.Aluno",
+            "projectName": "CursoJavaUdemy_c430b5c7"
+        },
+        {
+            "type": "java",
+            "name": "AreaRetangulo",
+            "request": "launch",
+            "mainClass": "OrientaçãoAObjetos.Exercicios.AreaRetangulo",
+            "projectName": "CursoJavaUdemy_c430b5c7"
+        },
+        {
+            "type": "java",
+            "name": "banco",
+            "request": "launch",
+            "mainClass": "OrientaçãoAObjetos.Exercicios.Banco.banco",
+            "projectName": "CursoJavaUdemy_c430b5c7"
+        },
+        {
+            "type": "java",
+            "name": "banco(1)",
+            "request": "launch",
+            "mainClass": "OrientaçãoAObjetos.Exercicios.BancoCorrecao.banco",
+            "projectName": "CursoJavaUdemy_c430b5c7"
+        },
+        {
+            "type": "java",
+            "name": "Main(7)",
+            "request": "launch",
+            "mainClass": "OrientaçãoAObjetos.Exercicios.ConversosMoedas.src.Main",
+            "projectName": "CursoJavaUdemy_c430b5c7"
+        },
+        {
+            "type": "java",
+            "name": "Main(8)",
+            "request": "launch",
+            "mainClass": "OrientaçãoAObjetos.Exercicios.DefaultConstructor.Main",
+            "projectName": "CursoJavaUdemy_c430b5c7"
+        },
+        {
+            "type": "java",
+            "name": "Estoque",
+            "request": "launch",
+            "mainClass": "OrientaçãoAObjetos.Exercicios.Estoque",
+            "projectName": "CursoJavaUdemy_c430b5c7"
+        },
+        {
+            "type": "java",
+            "name": "SalarioEmpregado",
+            "request": "launch",
+            "mainClass": "OrientaçãoAObjetos.Exercicios.ExerciciosOOPJava.SalarioEmpregado.SalarioEmpregado",
+            "projectName": "CursoJavaUdemy_c430b5c7"
+        },
+        {
+            "type": "java",
+            "name": "areaTrianguloSemOOP",
+            "request": "launch",
+            "mainClass": "OrientaçãoAObjetos.Exercicios.areaTrianguloSemOOP",
+            "projectName": "CursoJavaUdemy_c430b5c7"
+        },
+        {
+            "type": "java",
+            "name": "CotacaoDolar",
+            "request": "launch",
+            "mainClass": "OrientaçãoAObjetos.MetodosEstaticos.CotacaoDolar",
+            "projectName": "CursoJavaUdemy_c430b5c7"
+        },
+        {
+            "type": "java",
+            "name": "Versao1",
+            "request": "launch",
+            "mainClass": "OrientaçãoAObjetos.MetodosEstaticos.Versao1",
+            "projectName": "CursoJavaUdemy_c430b5c7"
+        },
+        {
+            "type": "java",
+            "name": "Main(9)",
+            "request": "launch",
+            "mainClass": "OverloadingConstructor.Main",
+            "projectName": "CursoJavaUdemy_c430b5c7"
+        },
+        {
+            "type": "java",
+            "name": "Main(10)",
+            "request": "launch",
+            "mainClass": "ParamentConstructor.Main",
+            "projectName": "CursoJavaUdemy_c430b5c7"
+        },
+        {
+            "type": "java",
+            "name": "SalarioEmpregado(1)",
+            "request": "launch",
+            "mainClass": "SalarioEmpregado.SalarioEmpregado",
+            "projectName": "CursoJavaUdemy_c430b5c7"
+        },
+        {
+            "type": "java",
+            "name": "TresNumerosMaiores",
+            "request": "launch",
+            "mainClass": "TresNumerosMaiores",
+            "projectName": "CursoJavaUdemy_c430b5c7"
+        },
+        {
+            "type": "java",
+            "name": "Main(11)",
+            "request": "launch",
+            "mainClass": "Vetores.MediaPares.Main",
+            "projectName": "CursoJavaUdemy_c430b5c7"
+        },
+        {
+            "type": "java",
+            "name": "Main(12)",
+            "request": "launch",
+            "mainClass": "Vetores.MediaProdutos.Main",
+            "projectName": "CursoJavaUdemy_c430b5c7"
+        },
+        {
+            "type": "java",
+            "name": "Main(13)",
+            "request": "launch",
+            "mainClass": "Vetores.SomaDoisVetores.Main",
+            "projectName": "CursoJavaUdemy_c430b5c7"
+        },
+        {
+            "type": "java",
+            "name": "Main(14)",
+            "request": "launch",
+            "mainClass": "Vetores.SomaVetor.Main",
+            "projectName": "CursoJavaUdemy_c430b5c7"
+        },
+        {
+            "type": "java",
+            "name": "Main(15)",
+            "request": "launch",
+            "mainClass": "Vetores.VetorDadosPessoais.Main",
+            "projectName": "CursoJavaUdemy_c430b5c7"
+        },
+        {
+            "type": "java",
+            "name": "VetorMediaAltura",
+            "request": "launch",
+            "mainClass": "Vetores.VetorMediaAltura",
+            "projectName": "CursoJavaUdemy_c430b5c7"
+        },
+        {
+            "type": "java",
+            "name": "Main(16)",
+            "request": "launch",
+            "mainClass": "Vetores.VetorNumerosNegativos.Main",
+            "projectName": "CursoJavaUdemy_c430b5c7"
+        }
+    ]
+}

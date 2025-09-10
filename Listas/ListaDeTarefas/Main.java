@@ -1,75 +1,63 @@
-package Listas.ListaDeTarefas;
-import java.util.Scanner;
-import java.util.ArrayList;
-import java.util.List;
+    package Listas.ListaDeTarefas;
+    import java.util.Scanner;
 
-public class Main {
+    public class Main {
 
-    public static void main(String[] args) {
-        
-        Scanner read = new Scanner(System.in);
-
-        System.out.println("\n--------- Lista de Tarefas -------------\n");
-
-        
-        Tarefa tarefa = new Tarefa("Sem descrição");
-
-        List<Tarefa> list = new ArrayList<>();
-
-        System.out.println("\nTitulo da tarefa");
-        System.out.println("");
-        tarefa.setTitulo(read.nextLine());
-
-
-        
-        do  {
+        public static void main(String[] args) {
             
-            System.out.println("Gostaria de colocar uma descrição para tarefa? s/n");
-            tarefa.setOpcao(read.nextLine());
-            
+            Scanner read = new Scanner(System.in);
 
-            if (tarefa.getOpcao().equals("s")){
-
-                System.out.println("Descrição:\n");
-                System.out.println("");
-                tarefa.setTarefas(read.nextLine());
-                list.add(tarefa);
-
-                for (Tarefa x : list){
-                    System.out.println(x.toString());
-                }
-            }
-
-           
-            else if (tarefa.getOpcao().equals("n")) {
-                list.add(tarefa);
-                 
-                
-
-
-
-                for (Tarefa x: list){
-                    System.out.println(x.toString());
-                }
-            }
-
-            else {
-                System.out.println("opcão Invalida ");
-                
-            }
-
-        } while (tarefa.verificarDescricao() == false);
-
-
-            
-
-       
-            
-
-        
-
-    }
-
-
+            GerenciadorTarefas gerenciadorTarefas = new GerenciadorTarefas();
+            int menu;
     
-}
+            System.out.println("\n--------- Lista de Tarefas -------------\n");
+            
+            do {
+            System.out.print("[1] - Criar nova tarefa\n[2] - Editar Tarefa\n[3] - Excluir Tarefa\n[4] - Sair\nOpção: ");
+            menu = read.nextInt();
+
+            read.nextLine();
+
+            
+                switch (menu) {  
+                    case 1:
+
+                        AdicionarTarefa.adicionarTarefa(gerenciadorTarefas, read);
+                    
+                    break;
+
+                    case 2 :
+
+                        EditarTarefa.editarTarefa(gerenciadorTarefas, read);
+
+                    break;
+
+                    case 3:
+
+                        ExcluirTarefa.excluir(gerenciadorTarefas, read);
+
+                    break;
+
+                    case 4:
+
+                        System.out.println("Saindo...");
+
+                    break;
+            
+                    default:
+
+                        System.out.println("Opcao Invalida");
+
+                    break;
+
+                }
+
+            } while (menu != 4);
+
+            read.close();
+
+        }
+
+        
+        
+    }

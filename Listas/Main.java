@@ -17,7 +17,7 @@ public class Main {
         list.add("Roberto");
         list.add("BOb");
 
-        list.add(2, "Victor"); 
+        list.add(2 , "Victor"); 
 
         System.out.println("Tamanho da lista: " + list.size());
 

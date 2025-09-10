@@ -1,19 +1,13 @@
 package Listas.ListaDeTarefas;
-import java.util.Date;
+
 
 
 public class Tarefa {
 
 
-    private int escolhaTarefa;
     private String titulo;
+    private int id; 
     private String descricao;
-    private String editar;
-    private int id;
-    private String opcao;
-    private Date data;    
-
-    
 
 
     public Tarefa () {
@@ -21,7 +15,6 @@ public class Tarefa {
     }
 
     
-
     public Tarefa (String descricao){
         this.descricao = descricao;
     }
@@ -33,6 +26,9 @@ public class Tarefa {
 
 
     public void setTitulo(String titulo) {
+        if (titulo.isEmpty()){
+            throw new IllegalArgumentException("Nome da tarefa não pode ser vazio");
+        }
         this.titulo = titulo;
     }
 
@@ -43,17 +39,10 @@ public class Tarefa {
 
 
     public void setDescricao(String descricao) {
+        if (descricao.isEmpty()){
+            throw new IllegalArgumentException("Deve conter descrição");
+        }
         this.descricao = descricao;
-    }
-
-
-    public String getEditar() {
-        return editar;
-    }
-
-
-    public void setEditar(String editar) {
-        this.editar = editar;
     }
 
 
@@ -67,53 +56,15 @@ public class Tarefa {
     }
 
 
-    public Tarefa (int escolhaTarefa, String titulo){
-        this.escolhaTarefa = escolhaTarefa;
-        this.titulo = titulo;
+    @Override
+    public String toString() {
+        return String.format(
+        "\nID:\n%d\nTítulo da Tarefa:\n%s\n\nDescrição da Tarefa:\n%s\n",
+        getId(),
+        getTitulo(),
+        getDescricao());
     }
 
-    public void setEscolhaTarefa(int escolhaTarefa){
-        this.escolhaTarefa = escolhaTarefa;
-    }
-
-    public int getEscolhaTarefa (){
-        return escolhaTarefa;
-    }
-
-    public void setTarefas (String tarefas){
-        this.titulo = tarefas;
-    }
-
-    public String getTarefas (){
-        return titulo;
-    }
-
-    public void setOpcao(String opcao){
-        this.opcao = opcao;
-    }
-
-    public String getOpcao (){
-        return opcao;
-    }
-
-    public boolean verificarDescricao (){
-        if (getOpcao().equals("s")) {
-            return true;
-        }
-
-        else if (getOpcao().equals("n")){
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
-
-    public String toString () {
-        return String.format("\nTitulo da Tarefa:" + "\n" + getTitulo() + "\n" + "\nDescrição da Tarefa:\n" + getDescricao() + "\n"); 
-    }
-
-    
 
     
 }
