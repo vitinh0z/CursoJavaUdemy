@@ -8,6 +8,13 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+            "mainClass": "Heranca.AnimalPeixeECachorro.Main",
+            "projectName": "CursoJavaUdemy_15182399"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
             "mainClass": "Heranca.CalculoInss.Main",
             "projectName": "CursoJavaUdemy_96d8bcb9"
         },
