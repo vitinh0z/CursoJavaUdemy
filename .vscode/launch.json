@@ -8,8 +8,13 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+<<<<<<< HEAD
             "mainClass": "Heranca.ClasseSociais.Main",
             "projectName": "CursoJavaUdemy_96d8bcb9"
+=======
+            "mainClass": "Heranca.AnimalPeixeECachorro.Main",
+            "projectName": "CursoJavaUdemy_15182399"
+>>>>>>> 1030c66b10a307dd95dcac128598c21a35f5350e
         },
         {
             "type": "java",
