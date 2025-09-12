@@ -68,7 +68,7 @@ public class Main {
                     String senhaGerada = gerarSenha.gerarSenha();
 
                     
-                    FileWriter arquivo = new FileWriter("senha.txt");
+                    FileWriter arquivo = new FileWriter("senha.txt", true);
                     PrintWriter gravarArq = new PrintWriter(arquivo);
 
 
@@ -76,7 +76,7 @@ public class Main {
                     String legenda = read.nextLine();
 
 
-                    gravarArq.printf(legenda + " " + senhaGerada);
+                    gravarArq.printf(legenda + ": " + " " + senhaGerada + " \n");
 
                    
                     

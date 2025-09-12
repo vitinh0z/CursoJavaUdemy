@@ -53,7 +53,7 @@ public class GerarSenha {
     }
 
     public boolean isIncluir_maiusculas() {
-
+        
         return incluir_maiusculas;
     }
 
