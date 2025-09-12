@@ -1,7 +1,9 @@
 package GeradorDeSenha;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class GerarSenha {
 
@@ -70,62 +72,62 @@ public class GerarSenha {
 
     // ------------ GERAR AS LETRAR MINUSCULAS, MAIUSCULAS, SIMBOLOS, NUMEROS ----------- 
 
-    public String gerarMinuscula (){
-        List<Character> letrarMinusculas = new ArrayList<>();
-
-        for (char letra = 'a'; letra <= 'z'; letra++){
-            letrarMinusculas.add(letra);
-        }
-
-        return gerarMinuscula();
+    
+    public String obterCaracteresMinusculos (){
+        return "abcdefghijklmnopqrstuvwxyz";
     }
 
-    public String gerarMaiuscula (){
-
-        List<Character> letrarMaiuscula = new ArrayList<>();
-
-        for (char letra = 'A'; letra <= 'Z'; letra++){
-            letrarMaiuscula.add(letra);
-        }
-
-        return gerarMaiuscula();
+    public String obterCaracteresMaiusculos(){
+        return "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     }
 
-    public String gerarNumeros (){
-        List<Integer> numeros = new ArrayList<>();
-
-        for (Integer n = 1; n <= 10; n++){
-            numeros.add(n);
-        }
-
-        return gerarNumeros();
+    public String obterNumeros (){
+        return "0123456789";
     }
+
+    public String obterCaracteresEspeciais () {
+        return "!@#$%¨&*()_+-=;:?{}}|/";
+    }
+
 
     // ------ PASSA OS METODOS E RETORNA NO METODO GERASENHA
     public String gerarSenha () {
+        String caracteresPermitidos = "";
 
         if (isIncluir_minusculas()){
-            gerarMinuscula();
+            caracteresPermitidos += obterCaracteresMinusculos();
         }
 
-        else if (isIncluir_maiusculas()){
-            gerarMaiuscula();
+        if (isIncluir_maiusculas()){
+          caracteresPermitidos += obterCaracteresMaiusculos();
         }
 
-        else if (incluir_numeros){
-            gerarNumeros();
+        if (isIncluir_numeros()){
+            caracteresPermitidos += obterNumeros();
         }
 
-        return gerarSenha();
+        if (isIncluir_simbolos()){
+            caracteresPermitidos += obterCaracteresEspeciais();
+        }
 
-    }
+        if (caracteresPermitidos.isEmpty()){
+            return "Erro. Escolha ao menos uma opção";
+        }
+
+        StringBuilder senhaFinal = new StringBuilder();
+        Random random = new SecureRandom();
+
+        for (int i = 0; i<this.tamanho; i++){
+            int sorteio = random.nextInt(caracteresPermitidos.length());
+
+            char caracteresSorteado = caracteresPermitidos.charAt(sorteio);
+
+            senhaFinal.append(caracteresSorteado);
+        }
 
 
+        return senhaFinal.toString();
 
-    // TOSTRING 
-    @Override
-    public String toString() {
-        return gerarSenha();
     }
 
    

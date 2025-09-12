@@ -24,7 +24,9 @@ public class Main {
                 System.out.println("Deve conter Número?: (s/n)");
                 char opcao = read.nextLine().charAt(0);
 
-                if (opcao.equals()
+                if (opcao.equals(){
+                    
+                }
                     
             break;
                 
