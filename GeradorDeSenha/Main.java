@@ -24,62 +24,54 @@ public class Main {
             case 1:
 
                 System.out.println("---- Gerar Senha ----");
+
+                System.out.println("qual tamanho da senha: ");
+                gerarSenha.setTamanho(read.nextInt());
+
                 System.out.println("Deve conter Número?: (s/n)");
                 char opcao = read.nextLine().charAt(0);
+               
+                System.out.println("Deve conter Minusculas?: (s/n)");
+                opcao = read.nextLine().charAt(0);
 
                 if (opcao == 's'){
-                    gerarSenha.isIncluir_numeros();
-                }
-                else {
-                    System.out.println("Deve conter Minusculas?: (s/n)");
-                    opcao = read.nextLine().charAt(0);
 
-                    if (opcao == 's'){
-                        gerarSenha.isIncluir_numeros();
-                    }
+                    gerarSenha.setIncluir_minusculas(true);
 
-                    else {
-
-                        System.out.println("Deve conter maiusculas?: (s/n)");
-                        opcao = read.nextLine().charAt(0);
-
-                        if (opcao == 's'){
-                            gerarSenha.isIncluir_maiusculas();
-                        }
-
-                        else {
-                            System.out.println("Deve conter números?: (s/n)");
-                            opcao = read.nextLine().charAt(0);
-
-                            if (opcao == 's'){
-                                gerarSenha.isIncluir_numeros();
-                            }
-
-                            else {
-                                System.out.println("Deve conter Caracteres Especiais?: (s/n)");
-                                opcao = read.nextLine().charAt(0);
-
-                                if (opcao == 's'){
-                                    gerarSenha.isIncluir_simbolos();
-                                }
-
-                            }
-
-
-                            System.out.println("Senha: " + gerarSenha.gerarSenha());
-
-
-
-                        }
-
-                    }
                 }
 
+                System.out.println("Deve conter Maiusculas?: (s/n)");
+                opcao = read.nextLine().charAt(0);
 
-                
+                if (opcao == 's'){
 
-                
-                    
+                    gerarSenha.setIncluir_maiusculas(true);
+                       
+                }
+                       
+                System.out.println("Deve conter Números: (s/n)");
+                opcao = read.nextLine().charAt(0);
+
+                if (opcao == 's'){
+
+                    gerarSenha.setIncluir_numeros(true);
+                }
+
+    
+                System.out.println("Deve conter simbolos: (s/n)");
+                opcao = read.nextLine().charAt(0);
+
+                if (opcao == 's'){
+
+                    gerarSenha.setIncluir_simbolos(true);
+                }
+
+                            
+
+
+                System.out.println("Senha: " + gerarSenha.gerarSenha());
+
+    
             break;
                 
             case 2:
