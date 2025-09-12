@@ -1,14 +1,17 @@
 package GeradorDeSenha;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         Scanner read = new Scanner(System.in);
         GerarSenha gerarSenha = new GerarSenha();
-
+        
         System.out.println("----------- Gerador de Senha ---------- ");
 
         
@@ -53,10 +56,34 @@ public class Main {
 
                
                 if (!gerarSenha.isIncluir_minusculas() && !gerarSenha.isIncluir_maiusculas() && !gerarSenha.isIncluir_numeros() && !gerarSenha.isIncluir_simbolos()) {
+                    // ----> se não for nenhum dos dois imprimi essa mensagem;
+                    
                     System.out.println("Você deve escolher pelo menos um tipo de caractere para gerar a senha.");
+                    
                 } else {
+
+
+                    
+
                     String senhaGerada = gerarSenha.gerarSenha();
-                    System.out.println("\nSENHA GERADA: " + senhaGerada);
+
+                    
+                    FileWriter arquivo = new FileWriter("senha.txt");
+                    PrintWriter gravarArq = new PrintWriter(arquivo);
+
+
+                    System.out.println("Onde será usada essa senha: ");
+                    String legenda = read.nextLine();
+
+
+                    gravarArq.printf(legenda + " " + senhaGerada);
+
+                   
+                    
+
+                    arquivo.close();
+
+
                 }
 
                 break;
@@ -76,7 +103,7 @@ public class Main {
                 break;
 
             default:
-                System.out.println("Opção inválida. Em implementação.");
+                System.out.println("Opção inválida");
                 break;
         }
 
