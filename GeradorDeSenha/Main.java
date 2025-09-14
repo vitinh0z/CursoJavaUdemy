@@ -8,104 +8,47 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws IOException {
+        int menu;
 
         Scanner read = new Scanner(System.in);
         GerarSenha gerarSenha = new GerarSenha();
-        
+
         System.out.println("----------- Gerador de Senha ---------- ");
 
-        
-        System.out.print("[1] - Gerar Senha\n[2] - Abrir Cofre\n[3] - Fechar Cofre\n[4] - Sair\nOpção: ");
-        int menu = read.nextInt();
+        do {
 
-        read.nextLine(); 
+            System.out.print("[1] - Gerar Senha\n[2] - Abrir Cofre\n[3] - Fechar Cofre\n[4] - Sair\nOpção: ");
+            menu = read.nextInt();
 
-        switch (menu) {
-            case 1:
-                System.out.println("---- Gerar Senha ----");
+            read.nextLine();
 
-                System.out.print("Qual o tamanho da senha: ");
-                int tamanho = read.nextInt();
-                read.nextLine(); 
+            switch (menu) {
+                case 1:
 
-                gerarSenha.setTamanho(tamanho);
+                    GeradorDeSenha.geradorDeSenha(gerarSenha, read);
 
-                System.out.print("Deve conter letras minúsculas? (s/n): ");
-                char opcao = read.nextLine().charAt(0);
-                if (opcao == 's' || opcao == 'S') {
-                    gerarSenha.setIncluir_minusculas(true);
-                }
+                    break;
 
-                System.out.print("Deve conter letras maiúsculas? (s/n): ");
-                opcao = read.nextLine().charAt(0);
-                if (opcao == 's' || opcao == 'S') {
-                    gerarSenha.setIncluir_maiusculas(true);
-                }
+                case 2:
+                    System.out.println("Abrir Cofre");
 
-                System.out.print("Deve conter números? (s/n): ");
-                opcao = read.nextLine().charAt(0);
-                if (opcao == 's' || opcao == 'S') {
-                    gerarSenha.setIncluir_numeros(true);
-                }
+                    break;
 
-                System.out.print("Deve conter símbolos? (s/n): ");
-                opcao = read.nextLine().charAt(0);
-                if (opcao == 's' || opcao == 'S') {
-                    gerarSenha.setIncluir_simbolos(true);
-                }
+                case 3:
+                    System.out.println("Fechar cofre");
 
-               
-                if (!gerarSenha.isIncluir_minusculas() && !gerarSenha.isIncluir_maiusculas() && !gerarSenha.isIncluir_numeros() && !gerarSenha.isIncluir_simbolos()) {
-                    // ----> se não for nenhum dos dois imprimi essa mensagem;
-                    
-                    System.out.println("Você deve escolher pelo menos um tipo de caractere para gerar a senha.");
-                    
-                } else {
+                    break;
 
+                case 4:
+                    System.out.println("Saindo....");
+                    break;
 
-                    
+                default:
+                    System.out.println("Opção inválida");
+                    break;
+            }
 
-                    String senhaGerada = gerarSenha.gerarSenha();
-
-                    
-                    FileWriter arquivo = new FileWriter("senha.txt", true);
-                    PrintWriter gravarArq = new PrintWriter(arquivo);
-
-
-                    System.out.println("Onde será usada essa senha: ");
-                    String legenda = read.nextLine();
-
-
-                    gravarArq.printf(legenda + ": " + " " + senhaGerada + " \n");
-
-                   
-                    
-
-                    arquivo.close();
-
-
-                }
-
-                break;
-
-            case 2:
-                System.out.println("Abrir Cofre");
-             
-                break;
-
-            case 3:
-                System.out.println("Fechar cofre");
-               
-                break;
-
-            case 4:
-                System.out.println("Saindo....");
-                break;
-
-            default:
-                System.out.println("Opção inválida");
-                break;
-        }
+        } while (menu != 4);
 
         read.close();
     }
