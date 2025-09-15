@@ -21,28 +21,40 @@ public class Main {
 
         List<Produto> list = new ArrayList<>();
 
-        for (int i = 0; i <= quantidade; i++) {
+        for (int i = 0; i <quantidade; i++) {
             System.out.println("Produto é: (C)omum (U)sado (I)mportado");
             char escolha = read.nextLine().charAt(0);
 
+
+
             System.out.printf("Produto %d°", i + 1);
+            
+                System.out.print("Nome: ");
+                String nome = read.nextLine();
 
-            System.out.print("Nome: ");
-            String nome = read.nextLine();
+                System.out.print("Preço: ");
+                Double preco = read.nextDouble();
 
-            System.out.print("Preço: ");
-            Double preco = read.nextDouble();
-                    
+                read.nextLine();
 
-            read.nextLine();
 
-            if (escolha == 'u'){
+            if (escolha == 'c'){
+
+                list.add(new Produto(nome, preco));
+                
+            }
+            
+            
+
+            else if (escolha == 'u'){
 
                 System.out.println("Data de fabrição: ");
                 String dataFabricacao = read.nextLine(); // ------> sei la fazer isso ;-;
+
                 Date datafabricacao = format.parse(dataFabricacao);
                 
                 list.add(new ProdutosUsados(nome, preco, datafabricacao));
+                
             }
 
 
@@ -61,7 +73,7 @@ public class Main {
         }
 
         for (Produto produto : list) {
-            System.out.println(produto);
+            System.out.println(produto.etiquetaPreco());
         }
 
     }
