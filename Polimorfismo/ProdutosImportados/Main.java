@@ -23,7 +23,7 @@ public class Main {
 
         for (int i = 0; i <quantidade; i++) {
             System.out.println("Produto é: (C)omum (U)sado (I)mportado");
-            char escolha = read.nextLine().charAt(0);
+            char estado = read.nextLine().charAt(0);
 
 
 
@@ -38,30 +38,30 @@ public class Main {
                 read.nextLine();
 
 
-            if (escolha == 'c'){
+            if (estado == 'c'){
 
-                list.add(new Produto(nome, preco));
+                list.add(new Produto(nome, "comum", preco));
                 
             }
             
             
 
-            else if (escolha == 'u'){
+            else if (estado == 'u'){
 
                 System.out.println("Data de fabrição: ");
                 String dataFabricacao = read.nextLine(); // ------> sei la fazer isso ;-;
 
                 Date datafabricacao = format.parse(dataFabricacao);
                 
-                list.add(new ProdutosUsados(nome, preco, datafabricacao));
+                list.add(new ProdutosUsados(nome, "Usado", preco, datafabricacao));
                 
             }
 
 
-            else if(escolha == 'i'){ 
-                
+            else if(estado == 'i'){ 
+                System.out.println("Taxa da Importação: ");
                 Double taxaImportacao = read.nextDouble();
-                list.add(new ProdutoImportado(nome, preco, taxaImportacao));
+                list.add(new ProdutoImportado(nome, "Importado", preco, taxaImportacao));
                 
             }  
 

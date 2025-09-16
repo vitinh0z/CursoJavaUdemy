@@ -3,6 +3,7 @@ package Polimorfismo.ProdutosImportados;
 public class ProdutoImportado extends Produto{
 
     private Double taxaImportacao;
+    
 
 
     ProdutoImportado (){
@@ -10,8 +11,8 @@ public class ProdutoImportado extends Produto{
     }
 
 
-    ProdutoImportado(String nome, Double preco, Double taxaImportacao) {
-        super(nome, preco);
+    public ProdutoImportado(String nome, String estado, Double preco, Double taxaImportacao) {
+        super(nome, estado, preco);
         this.taxaImportacao = taxaImportacao;
     }
 
@@ -25,9 +26,19 @@ public class ProdutoImportado extends Produto{
         this.taxaImportacao = taxaImportacao;
     }
 
+    public Double valorFinal (){
+        return getPreco() + gettaxaImportacao();
+    }
+
     @Override
     public String etiquetaPreco() {
-        return super.etiquetaPreco();
+        return "Nome: " + getNome() 
+        + "Estado: " + getEstado() 
+        +  "Valor: " + getPreco()
+        + "Valor taxa: " 
+        + gettaxaImportacao() 
+        + "Preço Final: " 
+         + valorFinal();
     }
 
     

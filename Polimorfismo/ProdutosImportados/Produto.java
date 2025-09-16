@@ -4,14 +4,17 @@ public class Produto {
 
     private String nome;
     private Double preco;
+    private String estado;
 
     public Produto (){
 
     }
 
-    public Produto (String nome, Double preco){
+    public Produto (String nome, String estado, Double preco){
         this.nome = nome;
+        this.estado = estado;
         this.preco = preco;
+        
     }
 
 
@@ -32,7 +35,17 @@ public class Produto {
     }
 
     public String etiquetaPreco (){
-        return getNome() + " " + getPreco();
+        return "Nome: " + getNome() + "Estado: " + getEstado() + "Preço: " + getPreco();
     }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    
     
 }
