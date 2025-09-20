@@ -37,41 +37,41 @@ public class App {
 
 
             switch (opcao) {
+
                 case 's':
+
                     System.out.println("Taxa adicional: ");
                     double adicional = read.nextDouble();
                     read.nextLine();
                     list.add(new FuncionariosTerceiros(nome, horas, valorHora, adicional));
+
                 break;
 
                 case 'n':
+
                     list.add(new Funcionarios(nome, horas, valorHora));
+
                 break;
             
                 default:
+
                     System.out.println("Opção Invalida");
+
                 break;
             }
 
+            read.close();
+
             for (Funcionarios funcionarios : list) {
+
                 System.out.println(funcionarios.getNome() + " " + funcionarios.pagamento());
             }
-
-
-
         }
 
         for (Funcionarios funcionarios : list) {
+            
             System.out.println(funcionarios);
         }
-
-        
-
-
-
-
-
-
 
     }
 }
