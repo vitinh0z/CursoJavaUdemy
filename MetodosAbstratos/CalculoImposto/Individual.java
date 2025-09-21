@@ -19,16 +19,28 @@ public class Individual extends TaxPayer  {
         return healthExpenditures;
     }
 
-
-
-
     public void setHealthExpenditures(Double healthExpenditures) {
         this.healthExpenditures = healthExpenditures;
     }
     
     @Override
     public Double tax() {
-        return getAnualCome() * getHealthExpenditures();
+
+        if (getAnualCome() >= 2000.00){
+            return getAnualCome() * 0.15;
+        }
+
+        else if (getAnualCome() >= 2000.00){
+            return getAnualCome() * 0.25;
+
+        }
+
+        if (healthExpenditures > 0){
+           return getAnualCome() - getHealthExpenditures();
+        }
+        else {
+            return getAnualCome();
+        }
+
     }
-    
 }
