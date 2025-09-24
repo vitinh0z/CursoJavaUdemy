@@ -16,6 +16,7 @@ public class Reservation {
 
     private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
+
     public Integer getRoomNumber() {
         return roomNumber;
     }
@@ -52,7 +53,6 @@ public class Reservation {
         return "Quarto: " + getRoomNumber() + " | Data Checking: " + sdf.format(getCheckin()) + " | Data Checkout: "+ sdf.format(getCheckout()) + "Duration: " + duration() + "Nights";
     }
 
-    
 
     
 }
