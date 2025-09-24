@@ -17,6 +17,14 @@ public class Reservation {
     }
 
    public Reservation (Integer roomNumber, Date checkIng, Date checkOut){
+
+        if (getCheckIng().after(getCheckOut())){
+            throw new IllegalArgumentException("A data do checkout deve ser posterior a data");
+        }
+        if (getRoomNumber() <= 0){
+            throw new IllegalArgumentException("O numero do quarto deve ser maior que 0");
+        }
+        
         this.roomNumber = roomNumber;
         this.checkIng = checkIng;
         this.checkOut = checkOut;
@@ -55,7 +63,7 @@ public class Reservation {
 
     @Override
     public String toString() {
-        return "Quarto: " + getRoomNumber() + " | Data Checking: " + sdf.format(getCheckIng()) + " | Data Checkout: "+ sdf.format(getCheckOut()) + "Duration: " + duration() + "Nights";
+        return "Quarto: " + getRoomNumber() + " | Data Checking: " + sdf.format(getCheckIng()) + " | Data Checkout: "+ sdf.format(getCheckOut()) + " Duration: " + duration() + " Nights";
     }
 
 
