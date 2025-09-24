@@ -62,13 +62,12 @@ public class Reservation {
         return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
 
     }
-
     @Override
     public String toString() {
         return "Quarto: " + getRoomNumber() + " | Data Checking: " + sdf.format(getCheckIng()) + " | Data Checkout: "+ sdf.format(getCheckOut()) + " | Duration: " + duration() + " | Nights";
     }
 
 
-    
+    // salva github pqpp
     
 }
