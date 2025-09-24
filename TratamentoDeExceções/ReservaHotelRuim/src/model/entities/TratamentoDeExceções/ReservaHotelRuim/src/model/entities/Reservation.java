@@ -18,10 +18,13 @@ public class Reservation {
 
    public Reservation (Integer roomNumber, Date checkIng, Date checkOut){
 
-        if (getCheckIng().after(getCheckOut())){
+        if (checkIng.after(checkOut)){
+
             throw new IllegalArgumentException("A data do checkout deve ser posterior a data");
         }
-        if (getRoomNumber() <= 0){
+
+        if (roomNumber <= 0){
+
             throw new IllegalArgumentException("O numero do quarto deve ser maior que 0");
         }
         
@@ -33,9 +36,7 @@ public class Reservation {
     private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
     public Integer getRoomNumber() {
-        if (roomNumber < 0){
-            throw new IllegalArgumentException("Quarto deve ser maior que 0");
-        }
+       
         return roomNumber;
     }
 
@@ -56,6 +57,7 @@ public class Reservation {
         if (checkIng.getTime() > checkOut.getTime()){
             throw new IllegalArgumentException("Saida deve ser maior que a entrda");
         }
+
         long diff = checkOut.getTime() - checkIng.getTime();
         return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
 
@@ -63,7 +65,7 @@ public class Reservation {
 
     @Override
     public String toString() {
-        return "Quarto: " + getRoomNumber() + " | Data Checking: " + sdf.format(getCheckIng()) + " | Data Checkout: "+ sdf.format(getCheckOut()) + " Duration: " + duration() + " Nights";
+        return "Quarto: " + getRoomNumber() + " | Data Checking: " + sdf.format(getCheckIng()) + " | Data Checkout: "+ sdf.format(getCheckOut()) + " | Duration: " + duration() + " | Nights";
     }
 
 
