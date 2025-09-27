@@ -1,10 +1,7 @@
 package TratamentoDeExceções.ContaBanco.Aplication.src;
 
-import TratamentoDeExceções.ContaBanco.Aplication.src.Entities;
-
 import java.util.Scanner;
 
-import Heranca.Exemplo.Account;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,8 +11,10 @@ public class Main {
         Scanner read = new Scanner (System.in);
         
 
-        System.out.println("Entre com nome da conta: ");
+        System.out.println("Entre com numero da conta: ");
         int number = read.nextInt();
+
+        read.nextLine();
 
         System.out.println("Entre com nome da conta: ");
         String name = read.nextLine();
@@ -37,7 +36,7 @@ public class Main {
                     System.out.println("Digite o valor do saque: ");
                     Double saque = read.nextDouble();
 
-                    Account account = new Account(number, name, balance);
+                    Account account = new Account(number, name, withdrawLimit, balance);
 
                     account.withdraw(saque);
 
@@ -50,13 +49,11 @@ public class Main {
                     System.out.println("Digite o valor do deposito: ");
                     Double deposito = read.nextDouble();
 
-                     = new Account(number, name, balance);
+                    Account account2 = new Account(number, name, withdrawLimit, balance);
 
-                    account.deposit(deposito);
+                    account2.deposit(deposito);
 
-                    System.out.println(account);
-
-
+                    System.out.println(account2);
 
                 break;
             

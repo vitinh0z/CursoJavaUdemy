@@ -1,4 +1,4 @@
-package TratamentoDeExceções.ContaBanco.Aplication.src.Entities;
+package TratamentoDeExceções.ContaBanco.Aplication.Entities;
 
 public class Account {
 
@@ -14,7 +14,7 @@ public class Account {
     public Account(Integer number, String holder, Double withdrawLimit, Double balance) {
         this.number = number;
         this.holder = holder;
-        this.withdrawLimit = 100.00;
+        this.withdrawLimit = withdrawLimit;
         this.balance = balance;
     }
 
@@ -62,7 +62,7 @@ public class Account {
         if (balance >= getWithdrawLimit()){
             throw new IllegalArgumentException("ERRO: Limite de saque feito");
         }
-        
+
         this.balance -= amount;
     }
 
