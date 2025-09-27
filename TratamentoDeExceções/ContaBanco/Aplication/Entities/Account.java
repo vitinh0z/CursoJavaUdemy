@@ -55,12 +55,12 @@ public class Account {
     }
 
     public void withdraw (Double amount){
-        if (balance < 0){
-            throw new IllegalArgumentException("ERRO: Saldo Negativo");
+        if (amount > getWithdrawLimit()){
+            throw new IllegalArgumentException("ERRO: O valor do saque excede o limite");
         }
 
-        if (balance >= getWithdrawLimit()){
-            throw new IllegalArgumentException("ERRO: Limite de saque feito");
+        if (balance > getBalance()){
+            throw new IllegalArgumentException("ERRO: Saldo Insuficiente");
         }
 
         this.balance -= amount;

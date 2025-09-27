@@ -1,6 +1,8 @@
-package TratamentoDeExceções.ContaBanco.Aplication.src;
+package TratamentoDeExceções.ContaBanco.Aplication;
 
 import java.util.Scanner;
+
+import TratamentoDeExceções.ContaBanco.Aplication.Entities.Account;
 
 
 public class Main {
