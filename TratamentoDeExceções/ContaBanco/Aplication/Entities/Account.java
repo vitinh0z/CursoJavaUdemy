@@ -59,7 +59,7 @@ public class Account {
             throw new IllegalArgumentException("ERRO: O valor do saque excede o limite");
         }
 
-        if (balance > getBalance()){
+        if (amount > getBalance()){
             throw new IllegalArgumentException("ERRO: Saldo Insuficiente");
         }
 
