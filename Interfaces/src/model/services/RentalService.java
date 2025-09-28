@@ -10,10 +10,10 @@ public class RentalService {
     private double pricePerHoure;
     private double pricePerDay;
 
-    private BrazilTaxService taxService;
+    private TaxService taxservice;
 
-    public RentalService(BrazilTaxService taxService, double pricePerDay, double pricePerHoure) {
-        this.taxService = taxService;
+    public RentalService(double pricePerDay, double pricePerHoure, TaxService taxservice) {
+        this.taxservice = taxservice;
         this.pricePerDay = pricePerDay;
         this.pricePerHoure = pricePerHoure;
     }
@@ -34,12 +34,12 @@ public class RentalService {
         this.pricePerDay = pricePerDay;
     }
 
-    public BrazilTaxService getTaxService() {
-        return taxService;
+    public TaxService getTaxservice() {
+        return taxservice;
     }
 
-    public void setTaxService(BrazilTaxService taxService) {
-        this.taxService = taxService;
+    public void setTaxservice(TaxService taxservice) {
+        this.taxservice = taxservice;
     }
 
     public void processInvoce(CarRental carRental){
@@ -54,7 +54,7 @@ public class RentalService {
         else {
             basicPayment = getPricePerDay() * Math.ceil(hours / 24);
         }
-        double tax = taxService.tax(basicPayment);
+        double tax = taxservice.tax(basicPayment);
         carRental.setInvoice(new Invoice(basicPayment, tax));
     }
 }

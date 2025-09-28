@@ -1,14 +1,11 @@
 package aplication;
 
 import model.entities.CarRental;
-import model.entities.Invoice;
 import model.entities.Vehicle;
 import model.services.BrazilTaxService;
 import model.services.RentalService;
-
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeFormatterBuilder;
 import java.util.Scanner;
 
 public class Main {
@@ -36,7 +33,7 @@ public class Main {
         System.out.print("Entre com valor por dia: ");
         double pricePerDay = scanner.nextDouble();;
 
-        RentalService rentalService = new RentalService( new BrazilTaxService(), pricePerDay, pricePerHour);
+        RentalService rentalService = new RentalService(pricePerDay,pricePerHour, new BrazilTaxService());
 
         rentalService.processInvoce(carRental);
 
