@@ -4,14 +4,19 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Arquivos/Arquivos.iml" filepath="$PROJECT_DIR$/Arquivos/Arquivos.iml" />
       <module fileurl="file://$PROJECT_DIR$/CursoJavaUdemy.iml" filepath="$PROJECT_DIR$/CursoJavaUdemy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Arquivos/ExercicioProposto/ExercicioProposto.iml" filepath="$PROJECT_DIR$/Arquivos/ExercicioProposto/ExercicioProposto.iml" />
       <module fileurl="file://$PROJECT_DIR$/SintaxeBasica/Exercicios/Exercicios.iml" filepath="$PROJECT_DIR$/SintaxeBasica/Exercicios/Exercicios.iml" />
       <module fileurl="file://$PROJECT_DIR$/ExerciciosOOPJava/ExerciciosOOPJava.iml" filepath="$PROJECT_DIR$/ExerciciosOOPJava/ExerciciosOOPJava.iml" />
       <module fileurl="file://$PROJECT_DIR$/Arquivos/File-Scanner-IOException/File-Scanner-IOException.iml" filepath="$PROJECT_DIR$/Arquivos/File-Scanner-IOException/File-Scanner-IOException.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Arquivos/FileManipulation/FileManipulation.iml" filepath="$PROJECT_DIR$/Arquivos/FileManipulation/FileManipulation.iml" />
       <module fileurl="file://$PROJECT_DIR$/Arquivos/FileReaderEBufferedReader/FileReaderEBufferedReader.iml" filepath="$PROJECT_DIR$/Arquivos/FileReaderEBufferedReader/FileReaderEBufferedReader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Arquivos/FileWritterAndBufferedReader/FileWritterAndBufferedReader.iml" filepath="$PROJECT_DIR$/Arquivos/FileWritterAndBufferedReader/FileWritterAndBufferedReader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Interfaces/Interfaces.iml" filepath="$PROJECT_DIR$/Interfaces/Interfaces.iml" />
       <module fileurl="file://$PROJECT_DIR$/OrientaçãoAObjetos/OrientaçãoAObjetos.iml" filepath="$PROJECT_DIR$/OrientaçãoAObjetos/OrientaçãoAObjetos.iml" />
       <module fileurl="file://$PROJECT_DIR$/Polimorfismo/Polimorfismo.iml" filepath="$PROJECT_DIR$/Polimorfismo/Polimorfismo.iml" />
       <module fileurl="file://$PROJECT_DIR$/SintaxeBasica/SintaxeBasica.iml" filepath="$PROJECT_DIR$/SintaxeBasica/SintaxeBasica.iml" />
       <module fileurl="file://$PROJECT_DIR$/TratamentoDeExceções/TratamentoDeExceções.iml" filepath="$PROJECT_DIR$/TratamentoDeExceções/TratamentoDeExceções.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Arquivos/TryWithResources/TryWithResources.iml" filepath="$PROJECT_DIR$/Arquivos/TryWithResources/TryWithResources.iml" />
     </modules>
   </component>
 </project>
