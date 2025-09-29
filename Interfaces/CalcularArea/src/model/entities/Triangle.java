@@ -1,5 +1,7 @@
 package model.entities;
 
+import java.util.concurrent.TransferQueue;
+
 public class Triangle extends Forms {
 
     private Double base;
@@ -9,6 +11,7 @@ public class Triangle extends Forms {
     }
 
     public Triangle(Double base, Double altura) {
+
         this.base = base;
         this.altura = altura;
     }
