@@ -4,21 +4,20 @@ import java.util.Date;
 
 public class Installment {
 
-
-    Date dueDate;
+    private LocalDate localDate;
     double amount;
 
-    public Installment(Date dueDate, double amount) {
-        this.dueDate = dueDate;
+    public Installment(Date localDate, double amount) {
+        this.localDate = localDate;
         this.amount = amount;
     }
 
     public Date getDueDate() {
-        return dueDate;
+        return localDate;
     }
 
-    public void setDueDate(Date dueDate) {
-        this.dueDate = dueDate;
+    public void setDueDate(Date localDate) {
+        this.localDate = localDate;
     }
 
     public double getAmount() {

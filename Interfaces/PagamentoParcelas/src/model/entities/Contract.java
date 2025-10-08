@@ -5,13 +5,23 @@ import java.util.Date;
 public class Contract {
 
     private Integer number;
-    private Date date;
+   private LocalDate localDate;
     private Date totalValue;
 
-    public Contract(Integer number, Date date, Date totalValue) {
+    private List<Installment> installmentList = new ArrayList<>();
+
+    public Contract(Integer number, Date localDate, Date totalValue) {
         this.number = number;
-        this.date = date;
+        this.localDate = localDate;
         this.totalValue = totalValue;
+    }
+
+    public LocalDate getLocalDate() {
+        return localDate;
+    }
+
+    public void setLocalDate(LocalDate localDate) {
+        this.localDate = localDate;
     }
 
     public Integer getNumber() {
@@ -22,14 +32,6 @@ public class Contract {
         this.number = number;
     }
 
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
     public Date getTotalValue() {
         return totalValue;
     }
@@ -37,4 +39,9 @@ public class Contract {
     public void setTotalValue(Date totalValue) {
         this.totalValue = totalValue;
     }
+
+    public List<Installment> getInstallmentList() {
+        return installmentList;
+    }
+
 }
