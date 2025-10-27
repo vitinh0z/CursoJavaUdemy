@@ -4,10 +4,14 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Arquivos/Arquivos.iml" filepath="$PROJECT_DIR$/Arquivos/Arquivos.iml" />
       <module fileurl="file://$PROJECT_DIR$/Interfaces/CalcularArea/CalcularArea.iml" filepath="$PROJECT_DIR$/Interfaces/CalcularArea/CalcularArea.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Comparator/Comparator.iml" filepath="$PROJECT_DIR$/Comparator/Comparator.iml" />
       <module fileurl="file://$PROJECT_DIR$/Set/ConjuntosSet/ConjuntosSet.iml" filepath="$PROJECT_DIR$/Set/ConjuntosSet/ConjuntosSet.iml" />
       <module fileurl="file://$PROJECT_DIR$/TiposCuringas/CuringasDelimitados/CuringasDelimitados.iml" filepath="$PROJECT_DIR$/TiposCuringas/CuringasDelimitados/CuringasDelimitados.iml" />
       <module fileurl="file://$PROJECT_DIR$/CursoJavaUdemy.iml" filepath="$PROJECT_DIR$/CursoJavaUdemy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Set/Exercicio/Exercicio.iml" filepath="$PROJECT_DIR$/Set/Exercicio/Exercicio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Set/ExercicioFixacao/ExercicioFixacao.iml" filepath="$PROJECT_DIR$/Set/ExercicioFixacao/ExercicioFixacao.iml" />
       <module fileurl="file://$PROJECT_DIR$/Arquivos/ExercicioProposto/ExercicioProposto.iml" filepath="$PROJECT_DIR$/Arquivos/ExercicioProposto/ExercicioProposto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Map/ExercicioPropostoMap/ExercicioPropostoMap.iml" filepath="$PROJECT_DIR$/Map/ExercicioPropostoMap/ExercicioPropostoMap.iml" />
       <module fileurl="file://$PROJECT_DIR$/SintaxeBasica/Exercicios/Exercicios.iml" filepath="$PROJECT_DIR$/SintaxeBasica/Exercicios/Exercicios.iml" />
       <module fileurl="file://$PROJECT_DIR$/ExerciciosOOPJava/ExerciciosOOPJava.iml" filepath="$PROJECT_DIR$/ExerciciosOOPJava/ExerciciosOOPJava.iml" />
       <module fileurl="file://$PROJECT_DIR$/Arquivos/File-Scanner-IOException/File-Scanner-IOException.iml" filepath="$PROJECT_DIR$/Arquivos/File-Scanner-IOException/File-Scanner-IOException.iml" />
@@ -17,6 +21,7 @@
       <module fileurl="file://$PROJECT_DIR$/GenericosDelimitado/GenericosDelimitado.iml" filepath="$PROJECT_DIR$/GenericosDelimitado/GenericosDelimitado.iml" />
       <module fileurl="file://$PROJECT_DIR$/HashCodeEequals/HashCodeEequals.iml" filepath="$PROJECT_DIR$/HashCodeEequals/HashCodeEequals.iml" />
       <module fileurl="file://$PROJECT_DIR$/Interfaces/Interfaces.iml" filepath="$PROJECT_DIR$/Interfaces/Interfaces.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Map/Map.iml" filepath="$PROJECT_DIR$/Map/Map.iml" />
       <module fileurl="file://$PROJECT_DIR$/MetodosGenericos/MetodosGenericos.iml" filepath="$PROJECT_DIR$/MetodosGenericos/MetodosGenericos.iml" />
       <module fileurl="file://$PROJECT_DIR$/OrientaçãoAObjetos/OrientaçãoAObjetos.iml" filepath="$PROJECT_DIR$/OrientaçãoAObjetos/OrientaçãoAObjetos.iml" />
       <module fileurl="file://$PROJECT_DIR$/Polimorfismo/Polimorfismo.iml" filepath="$PROJECT_DIR$/Polimorfismo/Polimorfismo.iml" />
@@ -26,6 +31,7 @@
       <module fileurl="file://$PROJECT_DIR$/TiposCuringas/TiposCuringas.iml" filepath="$PROJECT_DIR$/TiposCuringas/TiposCuringas.iml" />
       <module fileurl="file://$PROJECT_DIR$/TratamentoDeExceções/TratamentoDeExceções.iml" filepath="$PROJECT_DIR$/TratamentoDeExceções/TratamentoDeExceções.iml" />
       <module fileurl="file://$PROJECT_DIR$/Arquivos/TryWithResources/TryWithResources.iml" filepath="$PROJECT_DIR$/Arquivos/TryWithResources/TryWithResources.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Map/demo/demo.iml" filepath="$PROJECT_DIR$/Map/demo/demo.iml" />
     </modules>
   </component>
 </project>
