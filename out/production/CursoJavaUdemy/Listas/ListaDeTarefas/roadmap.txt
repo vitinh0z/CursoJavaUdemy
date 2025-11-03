@@ -1,0 +1,113 @@
+🛠️ FASE 1 — Planejamento e estrutura inicial
+
+Definir o escopo
+
+Tarefas pessoais? Acadêmicas? Projetos em equipe?
+
+Simples ou com subtarefas, prazos, etc?
+
+Modelar a classe Tarefa
+
+Atributos básicos: id, titulo, descricao, prazo, concluida
+
+Métodos: marcarComoConcluida(), editar(), atrasada() etc.
+
+Escolher estrutura de armazenamento
+
+Usar ArrayList<Tarefa> inicialmente para guardar as tarefas.
+
+Pode usar HashMap<Integer, Tarefa> se quiser busca por ID mais rápida.
+
+🧱 FASE 2 — Funcionalidades básicas
+
+CRUD de tarefas
+
+Criar tarefa
+
+Listar tarefas
+
+Atualizar tarefa
+
+Remover tarefa
+
+Interface inicial (linha de comando)
+
+Scanner para entrada do usuário
+
+Menu simples com opções numéricas
+
+🧩 FASE 3 — Funcionalidades intermediárias
+
+Filtros e buscas
+
+Listar tarefas por status (pendente, concluída)
+
+Filtrar por data, prioridade, etiquetas, etc.
+
+Buscar por palavras-chave
+
+Subtarefas
+
+Classe Subtarefa ou lista de subtarefas dentro da Tarefa
+
+Persistência de dados
+
+Salvar em arquivo .txt, .csv ou .json
+
+Ler os dados ao iniciar o programa
+
+🎨 FASE 4 — Interface melhorada (opcional)
+
+Interface gráfica (GUI) com Swing ou JavaFX
+
+Janelas, botões, campos de texto, listas
+
+Atualização dinâmica da lista de tarefas
+
+🧠 FASE 5 — Recursos avançados
+
+Agendamento e alertas
+
+Notificações com base no prazo
+
+Tarefas recorrentes
+
+Prioridades e etiquetas
+
+Atributos extras para organização
+
+Filtros com base nessas tags
+
+Salvar no banco de dados
+
+Usar SQLite ou MySQL
+
+JDBC para conectar e interagir
+
+Autenticação (multiusuário)
+
+Login, senha
+
+Tarefas por usuário
+
+API REST (se quiser expandir para web)
+
+Criar backend com Spring Boot
+
+Endpoints para CRUD de tarefas
+
+🚀 FASE 6 — Extras e escalabilidade
+
+Exportar tarefas
+
+Para PDF, CSV, ou sincronizar com Google Calendar (via API)
+
+Testes automatizados
+
+Usar JUnit para testar métodos da classe Tarefa e outras lógicas
+
+Deploy (caso seja web ou desktop distribuído)
+
+Gerar .jar executável
+
+Publicar no GitHub, etc.
