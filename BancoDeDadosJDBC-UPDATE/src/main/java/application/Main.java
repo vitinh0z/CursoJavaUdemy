@@ -1,4 +1,4 @@
-package application;
+package BancoDeDadosJDBC;
 
 import db.DB;
 
