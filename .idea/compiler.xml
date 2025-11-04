@@ -10,6 +10,7 @@
         <module name="BancoDeDadosJDBC-Transacoes" />
         <module name="BancoDeDadosJDBC" />
         <module name="BancoDeDadosJDBC-ProjetoEmDAO" />
+        <module name="BancoDeDadosJDBC-ProjetoEmDAO (1)" />
       </profile>
     </annotationProcessing>
   </component>
