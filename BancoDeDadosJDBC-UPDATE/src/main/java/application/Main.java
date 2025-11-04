@@ -6,8 +6,6 @@ import main.java.db.DbException;
 
 import java.sql.*;
 
-import java.text.SimpleDateFormat;
-
 public class Main {
 
     public static void main (String[] args){
@@ -17,7 +15,7 @@ public class Main {
         PreparedStatement preparedStatement = null;
 
         try {
-            connection = DB.getConnection();
+            connection = db.getConnection();
 
             preparedStatement = connection.prepareStatement("UPDATE seller "
                     + "SET BaseSalary = BaseSalary + ? "
@@ -37,8 +35,8 @@ public class Main {
         }
 
         finally {
-            DB.closeStatament(preparedStatement);
-            DB.closeConnection();
+            db.closeStatament(preparedStatement);
+            db.closeConnection();
         }
 
     }

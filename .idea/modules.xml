@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Arquivos/Arquivos.iml" filepath="$PROJECT_DIR$/Arquivos/Arquivos.iml" />
       <module fileurl="file://$PROJECT_DIR$/BancoDeDadosJDBC.iml" filepath="$PROJECT_DIR$/BancoDeDadosJDBC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BancoDeDadosJDBC-Transacoes.iml" filepath="$PROJECT_DIR$/BancoDeDadosJDBC-Transacoes.iml" />
       <module fileurl="file://$PROJECT_DIR$/Interfaces/CalcularArea/CalcularArea.iml" filepath="$PROJECT_DIR$/Interfaces/CalcularArea/CalcularArea.iml" />
       <module fileurl="file://$PROJECT_DIR$/Comparator/Comparator.iml" filepath="$PROJECT_DIR$/Comparator/Comparator.iml" />
       <module fileurl="file://$PROJECT_DIR$/Set/ConjuntosSet/ConjuntosSet.iml" filepath="$PROJECT_DIR$/Set/ConjuntosSet/ConjuntosSet.iml" />

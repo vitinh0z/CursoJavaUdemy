@@ -6,7 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="BancoDeDadosJDBC-DELETE" />
+        <module name="BancoDeDadosJDBC-Transacoes" />
         <module name="BancoDeDadosJDBC" />
+        <module name="BancoDeDadosJDBC-ProjetoEmDAO" />
       </profile>
     </annotationProcessing>
   </component>

@@ -1,4 +1,4 @@
-package main.java.db;
+package BancoDeDadosJDBC;
 
 import java.io.Serial;
 
