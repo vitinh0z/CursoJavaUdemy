@@ -41,6 +41,14 @@ public class Main {
             System.out.println(x);
         }
 
+        System.out.println("==== TEST 4: seller findByDepartment ====");
+
+        Seller newSeller = new Seller (null, "Victor", "victor10.vg23@gmail.com", new Date(), 4000.0, department);
+        sellerDao.insert(newSeller);
+
+        System.out.println("Inserted! New id = " + newSeller.getId());
+
+
 
 
     }
