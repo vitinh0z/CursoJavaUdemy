@@ -33,6 +33,14 @@ public class Main {
             System.out.println(x);
         }
 
+        System.out.println("==== TEST 3: seller findByDepartment ====");
+
+        list = sellerDao.findAll();
+
+        for (Seller x : list){
+            System.out.println(x);
+        }
+
 
 
     }
