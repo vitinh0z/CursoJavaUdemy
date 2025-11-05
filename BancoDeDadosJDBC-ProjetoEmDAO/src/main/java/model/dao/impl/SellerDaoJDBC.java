@@ -127,7 +127,7 @@ public class SellerDaoJDBC implements SellerDao {
             preparedStatement = connection.prepareStatement("SELECT seller.*,department.Name as DepName " +
                     "FROM seller INNER JOIN department " +
                     "ON seller.DepartmentId = department.Id " +
-                    "WHERE seller.Id = ?"
+                    "WHERE selelr.Id = ?"
             );
 
             preparedStatement.setInt(1, id);

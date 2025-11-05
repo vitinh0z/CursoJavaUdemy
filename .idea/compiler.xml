@@ -7,11 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="BancoDeDadosJDBC-DELETE" />
+        <module name="AulaJPa" />
         <module name="BancoDeDadosJDBC-Transacoes" />
         <module name="BancoDeDadosJDBC" />
-        <module name="BancoDeDadosJDBC-ProjetoEmDAO" />
         <module name="BancoDeDadosJDBC-ProjetoEmDAO (1)" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="BancoDeDadosJDBC-ProjetoEmDAO" target="22" />
+    </bytecodeTargetLevel>
   </component>
 </project>
