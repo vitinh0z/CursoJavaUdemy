@@ -2,16 +2,41 @@ package org.example;
 
 import dominio.Pessoa;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+
 public class Main {
     public static void main(String[] args) {
 
-        Pessoa pessoa1 = new Pessoa(1, "Victor", "victor@gmail.com");
-
-        System.out.println(pessoa1);
-
+       EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("exemplo-jpa");
+       EntityManager entityManager = entityManagerFactory.createEntityManager();
 
 
+       try {
+           Pessoa p = entityManager.find(Pessoa.class, 2);
+           entityManager.getTransaction().begin();
+
+           if (p == null){
+               System.out.println("Pessoa do ID 2 nao foi encontrada");
+               entityManager.close();
+               return;
+           }
+           else {
+               entityManager.remove(p);
+               entityManager.getTransaction().commit();
+           }
+       } catch (Exception e){
+          if (entityManager.getTransaction().isActive()){
+              entityManager.getTransaction().rollback();
+          }
+          e.printStackTrace();
+       }
+
+       finally {
+           entityManager.close();
+           entityManagerFactory.close();
+       }
     }
 }
